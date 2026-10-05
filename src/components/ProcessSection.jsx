@@ -1,85 +1,36 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 
-const ProcessSection = () => {
-  const steps = [
-    {
-      num: '01',
-      title: 'Culture & Preparation',
-      desc: 'Mother culture / liquid culture and substrate preparation.',
-      img: '/step1_original.png'
-    },
-    {
-      num: '02',
-      title: 'Cultivation & Growth',
-      desc: 'Controlled environment and proper care.',
-      img: '/step2_original.png'
-    },
-    {
-      num: '03',
-      title: 'Harvest & Production',
-      desc: 'Harvesting, drying and value addition.',
-      img: '/step3_original.png'
-    }
-  ];
+const steps = [
+  ['01','Culture & Preparation','Mother culture / liquid culture and substrate preparation.','/step1_original.png'],
+  ['02','Cultivation & Growth','Controlled environment and proper care.','/step2_original.png'],
+  ['03','Harvest & Production','Harvesting, drying and value addition.','/step3_original.png']
+];
 
-  return (
-    <section id="process" className="section-padding" style={{ background: '#ffffff' }}>
-      <div className="container">
-        <div style={{ marginBottom: '45px' }}>
-          <span className="section-tag">OUR PROCESS</span>
-          <h2 className="font-serif" style={{ fontSize: '2.5rem', color: 'var(--text-dark)', marginBottom: '8px' }}>
-            From Culture to Harvest
-          </h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>
-            A simple 3-step cultivation journey with practical learning.
-          </p>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr auto 1fr', gap: '20px', alignItems: 'center' }}>
-          {steps.map((step, idx) => (
-            <React.Fragment key={idx}>
-              <div style={{
-                background: 'var(--bg-cream-page)',
-                borderRadius: 'var(--radius-md)',
-                padding: '24px',
-                textAlign: 'center',
-                border: '1px solid rgba(18, 32, 24, 0.08)'
-              }}>
-                <div style={{ width: '130px', height: '130px', margin: '0 auto 20px', borderRadius: '50%', overflow: 'hidden', border: '3px solid #ffffff', boxShadow: '0 6px 18px rgba(0,0,0,0.08)' }}>
-                  <img src={step.img} alt={step.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '8px' }}>
-                  <span style={{
-                    background: 'var(--color-orange)',
-                    color: '#ffffff',
-                    fontWeight: '800',
-                    fontSize: '0.8rem',
-                    padding: '2px 8px',
-                    borderRadius: 'var(--radius-sm)'
-                  }}>
-                    {step.num}
-                  </span>
-                  <h3 style={{ fontSize: '1.15rem', color: 'var(--text-dark)' }}>{step.title}</h3>
-                </div>
-
-                <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.5' }}>
-                  {step.desc}
-                </p>
-              </div>
-
-              {idx < steps.length - 1 && (
-                <div key={`arrow-${idx}`} style={{ display: 'flex', justifyContent: 'center' }}>
-                  <ChevronRight size={36} color="var(--color-orange)" />
-                </div>
-              )}
-            </React.Fragment>
-          ))}
-        </div>
+const ProcessSection = () => (
+  <section id="process" className="section-padding process-section">
+    <div className="container">
+      <div className="process-head">
+        <span className="section-tag">OUR PROCESS</span>
+        <h2 className="process-title">From Culture to Harvest</h2>
+        <p className="process-subtitle">A simple 3-step cultivation journey with practical learning.</p>
       </div>
-    </section>
-  );
-};
+
+      <div className="process-grid">
+        {steps.map(([num,title,desc,img], index) => (
+          <React.Fragment key={num}>
+            <article className="process-card">
+              <div className="process-image-wrap"><img src={img} alt={title} loading="lazy" /></div>
+              <span className="process-number">{num}</span>
+              <h3 className="process-card-title">{title}</h3>
+              <p className="process-card-desc">{desc}</p>
+            </article>
+            {index < 2 && <div className="process-arrow" aria-hidden="true"><ChevronRight size={34} /></div>}
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default ProcessSection;
