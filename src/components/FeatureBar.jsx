@@ -8,7 +8,7 @@ const FeatureBar = () => (
       <div className="feature-pill-single"><Settings size={22} color="var(--green-800)" /><span>Production Unit<br />Setup Guidance</span></div>
       <div className="feature-pill-single feature-pill-gold">
         <Handshake size={25} color="#8b5a13" />
-        <span><strong>BUYBACK SUPPORT</strong><small style={{display:'block',fontWeight:600,color:'#7a4d10'}}>For Eligible Production Partners</small></span>
+        <span><strong>BUYBACK GUARANTEE</strong><small style={{display:'block',fontWeight:600,color:'#7a4d10'}}>For Eligible Production Partners</small></span>
       </div>
       <div className="feature-pill-single"><Users size={22} color="var(--green-800)" /><span>Expert Consultation<br />& Ongoing Support</span></div>
       <div className="feature-pill-single"><Globe2 size={22} color="var(--green-800)" /><span>All India<br />Support</span></div>
