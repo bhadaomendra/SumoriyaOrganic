@@ -1,44 +1,59 @@
-import React from 'react';
-import { Sprout, MessageCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 
 const Navbar = ({ onOpenWhatsApp }) => {
+  const [open, setOpen] = useState(false);
+
   const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setOpen(false);
   };
+
+  const links = [
+    ['Home','hero'],['About','about'],['Cordyceps','about'],['Training','gallery'],
+    ['Production Setup','process'],['Buyback','buyback'],['Gallery','gallery'],['Contact','contact']
+  ];
 
   return (
     <header className="navbar">
       <div className="container nav-container">
-        {/* Brand Logo */}
-        <a href="#hero" className="brand-logo-wrapper">
-          <div className="brand-icon">
-            <Sprout size={24} />
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span className="brand-title">SUMORIYA ORGANIC</span>
-            <span className="brand-subtitle">AGRO GOLD PRIVATE LIMITED</span>
-          </div>
-        </a>
+        <button type="button" className="brand-logo-wrapper" onClick={() => scrollTo('hero')} aria-label="Go to home">
+          <img src="/logo_original.png" alt="Sumoriya Organic Agro Gold Private Limited" className="brand-logo" />
+        </button>
 
-        {/* Clean Borderless Text Navigation */}
-        <ul className="nav-links-list">
-          <li><button type="button" onClick={() => scrollTo('hero')} className="nav-link-btn active">Home</button></li>
-          <li><button type="button" onClick={() => scrollTo('about')} className="nav-link-btn">About</button></li>
-          <li><button type="button" onClick={() => scrollTo('about')} className="nav-link-btn">Cordyceps</button></li>
-          <li><button type="button" onClick={() => scrollTo('gallery')} className="nav-link-btn">Training</button></li>
-          <li><button type="button" onClick={() => scrollTo('process')} className="nav-link-btn">Production Setup</button></li>
-          <li><button type="button" onClick={() => scrollTo('buyback')} className="nav-link-btn">Buyback</button></li>
-          <li><button type="button" onClick={() => scrollTo('gallery')} className="nav-link-btn">Gallery</button></li>
-          <li><button type="button" onClick={() => scrollTo('contact')} className="nav-link-btn">Contact</button></li>
-        </ul>
+        <nav aria-label="Primary navigation">
+          <ul className="nav-links-list">
+            {links.map(([label,id], index) => (
+              <li key={label}>
+                <button type="button" onClick={() => scrollTo(id)} className={index === 0 ? 'nav-link-btn active' : 'nav-link-btn'}>
+                  {label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        {/* Right WhatsApp Pill Button */}
         <button type="button" onClick={onOpenWhatsApp} className="btn-pill btn-pill-green">
-          <MessageCircle size={18} color="#25d366" fill="#25d366" />
-          <span>Enquire on WhatsApp</span>
+          <MessageCircle size={17} color="#25d366" fill="#25d366" />
+          Enquire on WhatsApp
+        </button>
+
+        <button type="button" className="mobile-menu-btn" onClick={() => setOpen(!open)} aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open}>
+          {open ? <X size={21} /> : <Menu size={21} />}
         </button>
       </div>
+
+      {open && (
+        <div className="mobile-nav">
+          {links.map(([label,id]) => (
+            <button key={label} type="button" onClick={() => scrollTo(id)}>{label}</button>
+          ))}
+          <button type="button" className="btn-pill btn-pill-green mobile-whatsapp" onClick={() => { setOpen(false); onOpenWhatsApp(); }}>
+            <MessageCircle size={17} color="#25d366" fill="#25d366" />
+            Enquire on WhatsApp
+          </button>
+        </div>
+      )}
     </header>
   );
 };
