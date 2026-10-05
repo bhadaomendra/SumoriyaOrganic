@@ -1,44 +1,19 @@
 import React from 'react';
-import { Sprout, Settings, Handshake, Users, Globe } from 'lucide-react';
+import { Sprout, Settings, Handshake, Users, Globe2 } from 'lucide-react';
 
-const FeatureBar = () => {
-  return (
-    <div className="feature-bar-section">
-      <div className="container feature-bar-grid-5">
-        <div className="feature-pill-single">
-          <Sprout size={18} color="var(--color-orange)" />
-          <span>Hands-on Practical Training</span>
-        </div>
-
-        <div className="feature-pill-single">
-          <Settings size={18} color="var(--color-orange)" />
-          <span>Production Unit Setup Guidance</span>
-        </div>
-
-        <div className="feature-pill-single feature-pill-gold">
-          <Handshake size={24} color="#8a530f" style={{ flexShrink: 0 }} />
-          <div style={{ textAlign: 'left' }}>
-            <div style={{ fontSize: '0.85rem', fontWeight: '800', color: '#543004', textTransform: 'uppercase', lineHeight: '1.1' }}>
-              BUYBACK GUARANTEE
-            </div>
-            <div style={{ fontSize: '0.68rem', color: '#73460f', fontWeight: '700' }}>
-              For Eligible Production Partners
-            </div>
-          </div>
-        </div>
-
-        <div className="feature-pill-single">
-          <Users size={18} color="var(--color-orange)" />
-          <span>Expert Consultation & Ongoing Support</span>
-        </div>
-
-        <div className="feature-pill-single">
-          <Globe size={18} color="var(--color-orange)" />
-          <span>All India Support</span>
-        </div>
+const FeatureBar = () => (
+  <section className="feature-bar-section" aria-label="Sumoriya Organic key benefits">
+    <div className="container feature-bar-grid-5">
+      <div className="feature-pill-single"><Sprout size={22} color="var(--green-800)" /><span>Hands-on<br />Practical Training</span></div>
+      <div className="feature-pill-single"><Settings size={22} color="var(--green-800)" /><span>Production Unit<br />Setup Guidance</span></div>
+      <div className="feature-pill-single feature-pill-gold">
+        <Handshake size={25} color="#8b5a13" />
+        <span><strong>BUYBACK GUARANTEE</strong><small style={{display:'block',fontWeight:600,color:'#7a4d10'}}>For Eligible Production Partners</small></span>
       </div>
+      <div className="feature-pill-single"><Users size={22} color="var(--green-800)" /><span>Expert Consultation<br />& Ongoing Support</span></div>
+      <div className="feature-pill-single"><Globe2 size={22} color="var(--green-800)" /><span>All India<br />Support</span></div>
     </div>
-  );
-};
+  </section>
+);
 
 export default FeatureBar;
