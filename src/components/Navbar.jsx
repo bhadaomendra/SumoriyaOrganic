@@ -8,38 +8,38 @@ const Navbar = ({ onOpenWhatsApp }) => {
   };
 
   return (
-    <nav className="navbar">
+    <header className="navbar">
       <div className="container nav-container">
         {/* Brand Logo */}
-        <a href="#hero" className="brand-logo">
-          <div className="brand-icon-box">
-            <Sprout size={22} color="var(--color-gold)" />
+        <a href="#hero" className="brand-logo-wrapper">
+          <div className="brand-icon">
+            <Sprout size={24} />
           </div>
-          <div className="brand-text">
-            <span className="brand-name">SUMORIYA ORGANIC</span>
-            <span className="brand-sub">AGRO GOLD PRIVATE LIMITED</span>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <span className="brand-title">SUMORIYA ORGANIC</span>
+            <span className="brand-subtitle">AGRO GOLD PRIVATE LIMITED</span>
           </div>
         </a>
 
-        {/* Links */}
-        <ul className="nav-menu">
-          <li><button onClick={() => scrollTo('hero')} className="nav-item-link active">Home</button></li>
-          <li><button onClick={() => scrollTo('about')} className="nav-item-link">About</button></li>
-          <li><button onClick={() => scrollTo('about')} className="nav-item-link">Cordyceps</button></li>
-          <li><button onClick={() => scrollTo('gallery')} className="nav-item-link">Training</button></li>
-          <li><button onClick={() => scrollTo('process')} className="nav-item-link">Production Setup</button></li>
-          <li><button onClick={() => scrollTo('buyback')} className="nav-item-link">Buyback</button></li>
-          <li><button onClick={() => scrollTo('gallery')} className="nav-item-link">Gallery</button></li>
-          <li><button onClick={() => scrollTo('contact')} className="nav-item-link">Contact</button></li>
+        {/* Clean Borderless Text Navigation */}
+        <ul className="nav-links-list">
+          <li><button type="button" onClick={() => scrollTo('hero')} className="nav-link-btn active">Home</button></li>
+          <li><button type="button" onClick={() => scrollTo('about')} className="nav-link-btn">About</button></li>
+          <li><button type="button" onClick={() => scrollTo('about')} className="nav-link-btn">Cordyceps</button></li>
+          <li><button type="button" onClick={() => scrollTo('gallery')} className="nav-link-btn">Training</button></li>
+          <li><button type="button" onClick={() => scrollTo('process')} className="nav-link-btn">Production Setup</button></li>
+          <li><button type="button" onClick={() => scrollTo('buyback')} className="nav-link-btn">Buyback</button></li>
+          <li><button type="button" onClick={() => scrollTo('gallery')} className="nav-link-btn">Gallery</button></li>
+          <li><button type="button" onClick={() => scrollTo('contact')} className="nav-link-btn">Contact</button></li>
         </ul>
 
         {/* Right WhatsApp Pill Button */}
-        <button onClick={onOpenWhatsApp} className="btn-pill btn-green">
+        <button type="button" onClick={onOpenWhatsApp} className="btn-pill btn-pill-green">
           <MessageCircle size={18} color="#25d366" fill="#25d366" />
           <span>Enquire on WhatsApp</span>
         </button>
       </div>
-    </nav>
+    </header>
   );
 };
 

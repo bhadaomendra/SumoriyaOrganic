@@ -3,20 +3,20 @@ import { ArrowRight } from 'lucide-react';
 
 const WorkInActionSection = () => {
   const images = [
-    { src: '/hero_scientist.jpg', title: 'Practical Lab Training' },
-    { src: '/step2.jpg', title: 'Illuminated Cultivation Racks' },
-    { src: '/about_jar.jpg', title: 'Cordyceps Militaris Macro' },
-    { src: '/step3.jpg', title: 'Harvest Ready Jars' },
-    { src: '/step1.jpg', title: 'Culture Inoculation Room' }
+    { src: '/gal1.png', title: 'Lab Training' },
+    { src: '/gal2.png', title: 'Cultivation Racks' },
+    { src: '/gal3.png', title: 'Cordyceps Jars' },
+    { src: '/gal4.png', title: 'Expert Guidance' },
+    { src: '/gal5.png', title: 'Lab Facility' }
   ];
 
   return (
-    <section id="gallery" className="sec-padding" style={{ background: 'var(--bg-cream)' }}>
+    <section id="gallery" className="section-padding" style={{ background: 'var(--bg-cream-page)' }}>
       <div className="container">
         {/* Top Header Row */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px', flexWrap: 'wrap', gap: '20px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '35px', flexWrap: 'wrap', gap: '20px' }}>
           <div>
-            <span className="tag-badge">OUR WORK IN ACTION</span>
+            <span className="section-tag">OUR WORK IN ACTION</span>
             <h2 className="font-serif" style={{ fontSize: '2.5rem', color: 'var(--text-dark)', marginBottom: '8px' }}>
               Training | Production | Guidance
             </h2>
@@ -25,31 +25,29 @@ const WorkInActionSection = () => {
             </p>
           </div>
 
-          <a href="#contact" className="btn-pill btn-outline-dark">
+          <a href="#contact" className="btn-pill btn-pill-outline-dark">
             <span>View Gallery</span>
             <ArrowRight size={16} />
           </a>
         </div>
 
         {/* 5 Horizontal Grid Items */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '14px' }}>
           {images.map((img, idx) => (
             <div 
               key={idx}
               style={{
                 borderRadius: 'var(--radius-md)',
                 overflow: 'hidden',
-                height: '200px',
-                boxShadow: 'var(--shadow-card)',
-                position: 'relative'
+                height: '140px',
+                boxShadow: '0 4px 14px rgba(18,32,24,0.06)',
+                border: '1px solid rgba(18, 32, 24, 0.08)'
               }}
             >
               <img 
                 src={img.src} 
                 alt={img.title} 
-                style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease' }}
-                onMouseEnter={(e) => e.target.style.transform = 'scale(1.08)'}
-                onMouseLeave={(e) => e.target.style.transform = 'scale(1.0)'}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
           ))}

@@ -7,28 +7,28 @@ const ProcessSection = () => {
       num: '01',
       title: 'Culture & Preparation',
       desc: 'Mother culture / liquid culture and substrate preparation.',
-      img: '/step1.jpg'
+      img: '/step1_original.png'
     },
     {
       num: '02',
       title: 'Cultivation & Growth',
       desc: 'Controlled environment and proper care.',
-      img: '/step2.jpg'
+      img: '/step2_original.png'
     },
     {
       num: '03',
       title: 'Harvest & Production',
       desc: 'Harvesting, drying and value addition.',
-      img: '/step3.jpg'
+      img: '/step3_original.png'
     }
   ];
 
   return (
-    <section id="process" className="sec-padding" style={{ background: '#ffffff' }}>
+    <section id="process" className="section-padding" style={{ background: '#ffffff' }}>
       <div className="container">
-        <div style={{ marginBottom: '50px' }}>
-          <span className="tag-badge">OUR PROCESS</span>
-          <h2 className="font-serif" style={{ fontSize: '2.5rem', color: 'var(--text-dark)', marginBottom: '10px' }}>
+        <div style={{ marginBottom: '45px' }}>
+          <span className="section-tag">OUR PROCESS</span>
+          <h2 className="font-serif" style={{ fontSize: '2.5rem', color: 'var(--text-dark)', marginBottom: '8px' }}>
             From Culture to Harvest
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>
@@ -40,11 +40,11 @@ const ProcessSection = () => {
           {steps.map((step, idx) => (
             <React.Fragment key={idx}>
               <div style={{
-                background: 'var(--bg-cream)',
+                background: 'var(--bg-cream-page)',
                 borderRadius: 'var(--radius-md)',
                 padding: '24px',
                 textAlign: 'center',
-                border: '1px solid var(--border-light)'
+                border: '1px solid rgba(18, 32, 24, 0.08)'
               }}>
                 <div style={{ width: '130px', height: '130px', margin: '0 auto 20px', borderRadius: '50%', overflow: 'hidden', border: '3px solid #ffffff', boxShadow: '0 6px 18px rgba(0,0,0,0.08)' }}>
                   <img src={step.img} alt={step.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />

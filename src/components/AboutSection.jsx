@@ -3,13 +3,13 @@ import { ArrowRight, GraduationCap, TestTube, Building2, Handshake, MessageSquar
 
 const AboutSection = () => {
   return (
-    <section id="about" className="sec-padding" style={{ background: 'var(--bg-cream)' }}>
+    <section id="about" className="section-padding" style={{ background: 'var(--bg-cream-page)' }}>
       <div className="container">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 0.8fr 0.9fr', gap: '30px', alignItems: 'center' }}>
           
           {/* Left Text */}
           <div>
-            <span className="tag-badge">ABOUT SUMORIYA ORGANIC</span>
+            <span className="section-tag">ABOUT SUMORIYA ORGANIC</span>
             <h2 className="font-serif" style={{ fontSize: '2.5rem', color: 'var(--text-dark)', marginBottom: '20px' }}>
               Knowledge. Support. <br />
               Real Opportunities.
@@ -17,33 +17,33 @@ const AboutSection = () => {
             <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '28px', lineHeight: '1.7' }}>
               Sumoriya Organic Agro Gold Pvt. Ltd. is focused on Cordyceps cultivation, practical training and production support. We work with individuals, farmers and entrepreneurs to help them learn, set up their own unit and build a sustainable business in the mushroom industry.
             </p>
-            <a href="#contact" className="btn-pill btn-outline-dark">
+            <a href="#contact" className="btn-pill btn-pill-outline-dark">
               <span>Know More About Us</span>
               <ArrowRight size={16} />
             </a>
           </div>
 
-          {/* Center Image */}
+          {/* Center Image (Original Cropped Asset) */}
           <div style={{ textAlign: 'center' }}>
             <img 
-              src="/about_jar.jpg" 
-              alt="Cordyceps Jar" 
+              src="/about_jar_original.png" 
+              alt="Cordyceps Jar Original" 
               style={{
                 width: '100%',
                 maxHeight: '340px',
                 objectFit: 'cover',
                 borderRadius: 'var(--radius-md)',
-                boxShadow: 'var(--shadow-card)'
+                boxShadow: '0 8px 24px rgba(18,32,24,0.08)'
               }}
             />
           </div>
 
-          {/* Right Feature Card */}
+          {/* Right Feature List */}
           <div style={{
             background: 'var(--bg-cream-card)',
             padding: '30px',
             borderRadius: 'var(--radius-md)',
-            border: '1px solid rgba(22, 36, 29, 0.08)'
+            border: '1px solid rgba(18, 32, 24, 0.08)'
           }}>
             <div style={{ display: 'grid', gap: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
