@@ -203,39 +203,82 @@ img{max-width:100%;display:block}
 }
 
 
-/* Hero credibility badge - one clean badge covering the baked-in artwork badge */
+
+/* Premium hero seal — intentionally oversized to fully cover the badge baked into the source photo */
 .hero-badge{
   position:absolute;
-  right:10px;
+  right:-4px;
   top:50%;
   transform:translateY(-50%);
-  z-index:3;
-  width:270px;
-  height:270px;
+  z-index:4;
+  width:330px;
+  height:330px;
   border-radius:50%;
   background:#f7f0dc;
   color:var(--green-900);
   display:grid;
   place-items:center;
   text-align:center;
-  padding:30px;
-  font-weight:800;
-  font-size:1rem;
-  line-height:1.35;
-  box-shadow:0 10px 28px rgba(0,0,0,.14);
-  border:1px solid rgba(214,154,54,.6);
+  box-shadow:0 18px 42px rgba(0,0,0,.18);
+  border:1px solid rgba(214,154,54,.75);
 }
 .hero-badge::before{
   content:'';
   position:absolute;
   inset:9px;
-  border:1px solid rgba(23,59,41,.42);
+  border:1px solid rgba(23,59,41,.45);
   border-radius:50%;
 }
-.hero-badge span{position:relative;z-index:1}
+.hero-badge::after{
+  content:'';
+  position:absolute;
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:var(--orange);
+  top:31px;
+  right:77px;
+  box-shadow:0 0 0 5px #f7f0dc,0 0 0 6px rgba(233,107,37,.28);
+}
+.hero-badge-inner{
+  position:relative;
+  z-index:2;
+  width:78%;
+  height:78%;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+}
+.hero-badge-kicker{
+  font-size:.54rem;
+  font-weight:800;
+  letter-spacing:2px;
+  color:var(--orange);
+  margin-bottom:5px;
+}
+.hero-badge-inner strong{
+  font-size:1.02rem;
+  line-height:1.28;
+  letter-spacing:-.15px;
+}
+.hero-badge-line{
+  width:38px;
+  height:1px;
+  background:rgba(23,59,41,.4);
+  margin:3px 0;
+}
 @media (max-width:900px){
-  .hero-badge{width:220px;height:220px;right:8px;font-size:.84rem;padding:24px}
+  .hero-badge{width:260px;height:260px;right:-2px}
+  .hero-badge-inner strong{font-size:.82rem}
+  .hero-badge-kicker{font-size:.46rem;letter-spacing:1.5px}
+  .hero-badge::after{width:10px;height:10px;top:25px;right:61px}
 }
 @media (max-width:560px){
-  .hero-badge{width:170px;height:170px;right:5px;font-size:.7rem;padding:18px}
+  .hero-badge{width:205px;height:205px;right:-2px}
+  .hero-badge-inner strong{font-size:.68rem}
+  .hero-badge-kicker{font-size:.38rem;letter-spacing:1.2px}
+  .hero-badge::after{width:8px;height:8px;top:20px;right:48px}
 }
