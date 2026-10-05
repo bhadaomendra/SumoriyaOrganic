@@ -25,6 +25,9 @@ const Hero = ({ onOpenWhatsApp }) => {
 
         <div className="hero-visual">
           <img src="/hero_img_original.png" alt="Cordyceps cultivation expert working with production jars" className="hero-img-original" fetchPriority="high" />
+          <div className="hero-badge" aria-label="Practical Knowledge, Real Training, Real Results">
+            <span>Practical<br />Knowledge<br />Real Training<br />Real Results</span>
+          </div>
         </div>
       </div>
     </section>
