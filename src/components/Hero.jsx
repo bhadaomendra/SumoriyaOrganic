@@ -24,7 +24,15 @@ const Hero = ({ onOpenWhatsApp }) => {
         </div>
 
         <div className="hero-visual">
-          <img src="/hero_img_original.png" alt="Cordyceps cultivation expert working with production jars" className="hero-img-original" fetchPriority="high" />
+          <img
+            src="/hero_img_original.png"
+            alt="Cordyceps cultivation expert working with production jars"
+            className="hero-img-original"
+            fetchPriority="high"
+          />
+          <div className="hero-message" aria-label="This Medicinal Mushroom Can Be a Profitable Business for You">
+            <span>This Medicinal Mushroom<br />Can Be a Profitable<br />Business for You</span>
+            <i aria-hidden="true"></i>
           </div>
         </div>
       </div>
