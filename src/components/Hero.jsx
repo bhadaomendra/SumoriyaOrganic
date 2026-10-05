@@ -25,7 +25,7 @@ const Hero = ({ onOpenWhatsApp }) => {
 
         <div className="hero-visual">
           <img
-            src="/hero_scientist.jpg"
+            src="/sumoriya-hero.png"
             alt="Cordyceps cultivation expert working with production jars"
             className="hero-img-original"
             fetchPriority="high"
