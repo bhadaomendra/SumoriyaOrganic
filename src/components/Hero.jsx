@@ -1,72 +1,60 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, TrendingUp, Award, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, MessageCircle, Sparkles } from 'lucide-react';
 
-const Hero = ({ onOpenContact }) => {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+const Hero = ({ onOpenWhatsApp }) => {
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="hero" className="hero-section">
-      <div className="container hero-grid">
-        {/* Left Content */}
+    <section id="hero" className="hero-wrapper">
+      <div className="container hero-layout">
+        {/* Left Column */}
         <div>
-          <div className="badge-pill">
-            <Award size={18} color="var(--gold-main)" />
-            <span>Rajasthan's #1 Mushroom Farming Partner • 350+ Units Setup</span>
+          <div className="hero-tag">
+            PRACTICAL TRAINING | CULTIVATION EXPERTISE | PRODUCTION SUPPORT
           </div>
 
-          <h1 className="hero-title">
-            Ghar Se Shuru Karein <span>High-Profit Organic</span> Mushroom Farming
+          <h1 className="hero-heading font-serif">
+            Build Your Own <br />
+            <span>Cordyceps</span> <br />
+            Production Unit
           </h1>
 
-          <p className="hero-sub">
-            Apne khali kamre ya space ko mahine ki guaranteed aamdani mein badlein. Hum dete hain complete Turnkey Setup Kit, practical training, aur <b>100% Legal Stamp-Paper Buyback Guarantee</b>!
+          <p className="hero-paragraph">
+            Learn from real experience. Get practical training, cultivation knowledge and production support from industry experts.
           </p>
 
-          <div className="hero-actions">
-            <button onClick={() => scrollToSection('calculator')} className="btn btn-gold">
-              <span>Calculate Your Monthly Income</span>
+          <div className="hero-btns">
+            <button onClick={() => scrollTo('gallery')} className="btn-pill btn-orange">
+              <span>Explore Training</span>
               <ArrowRight size={18} />
             </button>
-            <button onClick={onOpenContact} className="btn btn-outline">
-              <span>Get Free Advice</span>
-            </button>
-          </div>
 
-          {/* Quick Trust Highlights */}
-          <div style={{ display: 'flex', gap: '20px', marginTop: '35px', flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', fontWeight: '600' }}>
-              <CheckCircle2 size={18} color="var(--primary)" />
-              <span>Small Space Required (10x10 Room)</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', fontWeight: '600' }}>
-              <CheckCircle2 size={18} color="var(--primary)" />
-              <span>Harvest in 25-30 Days</span>
-            </div>
+            <button onClick={onOpenWhatsApp} className="btn-pill btn-dark-outline">
+              <MessageCircle size={18} color="#25d366" />
+              <span>Talk to an Expert</span>
+            </button>
           </div>
         </div>
 
-        {/* Right Hero Image Frame */}
-        <div className="hero-img-container">
+        {/* Right Column with Image & Floating Badge */}
+        <div className="hero-img-box">
           <img 
-            src="/hero_mushroom.jpg" 
-            alt="Organic Mushroom Farm Setup" 
-            className="hero-main-img"
+            src="/hero_scientist.jpg" 
+            alt="Scientist in Cordyceps Lab" 
+            className="hero-img"
           />
-          <div className="floating-badge">
-            <div className="floating-badge-icon">
-              <ShieldCheck size={28} />
-            </div>
-            <div>
-              <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Guaranteed Income</div>
-              <div style={{ fontWeight: '700', fontSize: '1.1rem', color: 'var(--primary-dark)' }}>
-                100% Legal Buyback Contract
-              </div>
-            </div>
+
+          {/* Round Badge matching top right float in image */}
+          <div className="floating-round-badge">
+            <span>
+              Practical <br />
+              Knowledge <br />
+              <strong style={{ color: 'var(--color-orange)' }}>Real Training</strong> <br />
+              Real Results
+            </span>
           </div>
         </div>
       </div>

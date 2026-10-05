@@ -1,47 +1,43 @@
-import React, { useState } from 'react';
-import { Sprout, PhoneCall, Menu, X } from 'lucide-react';
+import React from 'react';
+import { Sprout, MessageCircle } from 'lucide-react';
 
-const Navbar = ({ onOpenContact }) => {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const scrollToSection = (id) => {
-    setMobileOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+const Navbar = ({ onOpenWhatsApp }) => {
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <nav className="navbar-sticky">
-      <div className="container nav-wrapper">
+    <nav className="navbar">
+      <div className="container nav-container">
         {/* Brand Logo */}
-        <a href="#hero" className="logo-brand">
-          <div className="logo-icon">
-            <Sprout size={24} />
+        <a href="#hero" className="brand-logo">
+          <div className="brand-icon-box">
+            <Sprout size={22} color="var(--color-gold)" />
           </div>
-          <div>
-            <span>Sumoriya</span>
-            <span style={{ color: 'var(--gold-main)', marginLeft: '4px' }}>Organic</span>
+          <div className="brand-text">
+            <span className="brand-name">SUMORIYA ORGANIC</span>
+            <span className="brand-sub">AGRO GOLD PRIVATE LIMITED</span>
           </div>
         </a>
 
-        {/* Desktop Nav Links */}
-        <ul className="nav-links">
-          <li><button onClick={() => scrollToSection('calculator')} className="nav-link">Income Calculator</button></li>
-          <li><button onClick={() => scrollToSection('kits')} className="nav-link">Setup Kits</button></li>
-          <li><button onClick={() => scrollToSection('training')} className="nav-link">Training</button></li>
-          <li><button onClick={() => scrollToSection('buyback')} className="nav-link">100% Buyback</button></li>
-          <li><button onClick={() => scrollToSection('testimonials')} className="nav-link">Reviews</button></li>
+        {/* Links */}
+        <ul className="nav-menu">
+          <li><button onClick={() => scrollTo('hero')} className="nav-item-link active">Home</button></li>
+          <li><button onClick={() => scrollTo('about')} className="nav-item-link">About</button></li>
+          <li><button onClick={() => scrollTo('about')} className="nav-item-link">Cordyceps</button></li>
+          <li><button onClick={() => scrollTo('gallery')} className="nav-item-link">Training</button></li>
+          <li><button onClick={() => scrollTo('process')} className="nav-item-link">Production Setup</button></li>
+          <li><button onClick={() => scrollTo('buyback')} className="nav-item-link">Buyback</button></li>
+          <li><button onClick={() => scrollTo('gallery')} className="nav-item-link">Gallery</button></li>
+          <li><button onClick={() => scrollTo('contact')} className="nav-item-link">Contact</button></li>
         </ul>
 
-        {/* CTA Button */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <button onClick={onOpenContact} className="btn btn-primary">
-            <PhoneCall size={18} />
-            <span>Book Free Consultation</span>
-          </button>
-        </div>
+        {/* Right WhatsApp Pill Button */}
+        <button onClick={onOpenWhatsApp} className="btn-pill btn-green">
+          <MessageCircle size={18} color="#25d366" fill="#25d366" />
+          <span>Enquire on WhatsApp</span>
+        </button>
       </div>
     </nav>
   );
