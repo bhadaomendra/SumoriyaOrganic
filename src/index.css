@@ -204,81 +204,80 @@ img{max-width:100%;display:block}
 
 
 
-/* Premium hero seal — intentionally oversized to fully cover the badge baked into the source photo */
-.hero-badge{
+
+/* Hero message banner — replaces the circular artwork badge */
+.hero-message{
   position:absolute;
-  right:-4px;
+  right:18px;
   top:50%;
-  transform:translateY(-50%);
+  transform:translateY(-50%) rotate(-1.5deg);
   z-index:4;
-  width:330px;
-  height:330px;
-  border-radius:50%;
+  width:min(430px,48%);
+  min-height:132px;
+  padding:28px 58px 27px 38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
   background:#f7f0dc;
   color:var(--green-900);
-  display:grid;
-  place-items:center;
-  text-align:center;
-  box-shadow:0 18px 42px rgba(0,0,0,.18);
-  border:1px solid rgba(214,154,54,.75);
+  box-shadow:0 12px 26px rgba(0,0,0,.14);
+  clip-path:polygon(2% 10%, 7% 3%, 18% 6%, 29% 1%, 43% 5%, 57% 2%, 71% 6%, 83% 3%, 96% 9%, 100% 20%, 97% 34%, 100% 48%, 97% 63%, 100% 80%, 94% 91%, 82% 95%, 67% 92%, 53% 98%, 39% 94%, 25% 98%, 13% 94%, 4% 88%, 1% 76%, 4% 63%, 1% 49%, 4% 35%, 1% 21%);
 }
-.hero-badge::before{
+.hero-message::before{
   content:'';
   position:absolute;
   inset:9px;
-  border:1px solid rgba(23,59,41,.45);
-  border-radius:50%;
+  border:1px solid rgba(23,59,41,.12);
+  clip-path:inherit;
+  pointer-events:none;
 }
-.hero-badge::after{
-  content:'';
-  position:absolute;
-  width:13px;
-  height:13px;
-  border-radius:50%;
-  background:var(--orange);
-  top:31px;
-  right:77px;
-  box-shadow:0 0 0 5px #f7f0dc,0 0 0 6px rgba(233,107,37,.28);
-}
-.hero-badge-inner{
+.hero-message span{
   position:relative;
   z-index:2;
-  width:78%;
-  height:78%;
-  border-radius:50%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:7px;
+  font-size:1.12rem;
+  line-height:1.3;
+  font-weight:700;
+  letter-spacing:-.2px;
 }
-.hero-badge-kicker{
-  font-size:.54rem;
-  font-weight:800;
-  letter-spacing:2px;
-  color:var(--orange);
-  margin-bottom:5px;
+.hero-message i{
+  position:absolute;
+  right:24px;
+  bottom:18px;
+  width:45px;
+  height:45px;
+  border-radius:50% 44% 52% 40%;
+  background:var(--green-700);
+  transform:rotate(-24deg);
+  opacity:.92;
 }
-.hero-badge-inner strong{
-  font-size:1.02rem;
-  line-height:1.28;
-  letter-spacing:-.15px;
+.hero-message i::before,
+.hero-message i::after{
+  content:'';
+  position:absolute;
+  width:22px;
+  height:34px;
+  border-radius:90% 15% 90% 15%;
+  background:#6b8b58;
 }
-.hero-badge-line{
-  width:38px;
-  height:1px;
-  background:rgba(23,59,41,.4);
-  margin:3px 0;
-}
+.hero-message i::before{left:-11px;top:-18px;transform:rotate(-24deg)}
+.hero-message i::after{right:-10px;top:-7px;transform:rotate(28deg)}
 @media (max-width:900px){
-  .hero-badge{width:260px;height:260px;right:-2px}
-  .hero-badge-inner strong{font-size:.82rem}
-  .hero-badge-kicker{font-size:.46rem;letter-spacing:1.5px}
-  .hero-badge::after{width:10px;height:10px;top:25px;right:61px}
+  .hero-message{
+    width:min(390px,60%);
+    min-height:112px;
+    padding:22px 50px 22px 28px;
+  }
+  .hero-message span{font-size:.92rem}
+  .hero-message i{right:18px;bottom:12px;transform:scale(.8) rotate(-24deg)}
 }
 @media (max-width:560px){
-  .hero-badge{width:205px;height:205px;right:-2px}
-  .hero-badge-inner strong{font-size:.68rem}
-  .hero-badge-kicker{font-size:.38rem;letter-spacing:1.2px}
-  .hero-badge::after{width:8px;height:8px;top:20px;right:48px}
+  .hero-message{
+    width:72%;
+    min-height:96px;
+    right:8px;
+    padding:18px 40px 18px 18px;
+  }
+  .hero-message span{font-size:.72rem}
+  .hero-message i{right:10px;bottom:7px;transform:scale(.62) rotate(-24deg)}
 }
