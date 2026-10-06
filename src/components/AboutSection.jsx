@@ -50,7 +50,7 @@ const AboutSection = () => (
       {/* Center Column: Cordyceps Jar Image */}
       <div className="about-center-col">
         <img
-          src="/about_jar_original.png"
+          src="/about_jar_new.jpg"
           alt="Cordyceps cultivation jar with vibrant mushroom fruiting bodies"
           className="about-image"
           loading="lazy"
