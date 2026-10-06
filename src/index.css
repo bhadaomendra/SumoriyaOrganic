@@ -554,5 +554,37 @@ img{max-width:100%;display:block}
 
 
 
+/* Left-edge alignment (desktop / tablet landscape) */
+@media (min-width: 901px) {
+  :root {
+    --content-edge: calc(16px + clamp(28px, 4.5vw, 68px));
+  }
+
+  .feature-bar-section .container,
+  .about-section-wrapper .container,
+  .process-section .container,
+  .buyback-section .container,
+  #gallery .container,
+  .cta-section .container,
+  .footer .container {
+    width: auto;
+    max-width: none;
+    margin-left: var(--content-edge);
+    margin-right: var(--content-edge);
+  }
+
+  .about-section-wrapper .container,
+  .process-section .container,
+  .buyback-section .container,
+  #gallery .container,
+  .cta-section .container,
+  .footer .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+
 
 
