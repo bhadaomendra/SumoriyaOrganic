@@ -6,19 +6,9 @@ const Hero = ({ onOpenWhatsApp }) => {
 
   return (
     <section id="hero" className="hero-wrapper">
-      {/* Background Lab Image + Transparent Gradient Overlay */}
-      <div className="hero-bg-layer">
-        <img
-          src="/sumoriya-hero.png"
-          alt="Cordyceps cultivation lab background"
-          className="hero-bg-img"
-          fetchPriority="high"
-        />
-        <div className="hero-gradient-overlay"></div>
-      </div>
-
-      <div className="container hero-container-grid">
-        {/* Left Copy */}
+      <div className="container hero-grid-layout">
+        
+        {/* Left Column: Text Copy */}
         <div className="hero-copy">
           <div className="hero-tag">PRACTICAL TRAINING | CULTIVATION EXPERTISE | PRODUCTION SUPPORT</div>
           <h1 className="hero-title">
@@ -39,24 +29,60 @@ const Hero = ({ onOpenWhatsApp }) => {
           </div>
         </div>
 
-        {/* Right Highlighted Brush Badge Card */}
-        <div className="hero-right-highlight">
-          <div className="brush-badge-card">
-            <div className="brush-badge-text font-serif">
-              <span className="brush-line-1">This Medicinal Mushroom</span>
-              <span className="brush-line-2">Can Be a Profitable</span>
-              <span className="brush-line-3">Business for You</span>
+        {/* Right Column: Lab Scientist Image Card + Designer Brush Quote Badge */}
+        <div className="hero-visual-frame">
+          <div className="hero-image-card">
+            <img
+              src="/sumoriya-hero.png"
+              alt="Cordyceps cultivation lab expert and shelves"
+              className="hero-lab-img"
+              fetchPriority="high"
+            />
+          </div>
+
+          {/* Designer Brush Quote Badge */}
+          <div className="brush-quote-badge">
+            <svg className="brush-bg-svg" viewBox="0 0 340 145" fill="none" preserveAspectRatio="none">
+              {/* Organic Brush Stroke Ribbon Background */}
+              <path 
+                d="M12 22C42 12 115 14 175 10C235 6 302 14 326 24C336 29 333 50 330 74C326 100 334 120 320 127C293 140 208 132 148 136C88 140 28 130 10 120C1 114 4 90 7 64C10 40 3 26 12 22Z" 
+                fill="#f7f2e4" 
+                stroke="#ebdcb9" 
+                strokeWidth="2"
+              />
+              <path 
+                d="M6 30C48 18 138 20 198 14C258 8 312 20 332 32" 
+                stroke="#eee3c8" 
+                strokeWidth="4" 
+                strokeLinecap="round" 
+                opacity="0.7"
+              />
+              <path 
+                d="M16 128C78 135 168 128 238 131C288 133 318 123 330 115" 
+                stroke="#e5d5ac" 
+                strokeWidth="3" 
+                strokeLinecap="round" 
+                opacity="0.6"
+              />
+            </svg>
+
+            <div className="brush-text-content font-serif">
+              <p>This Medicinal Mushroom</p>
+              <p>Can Be a Profitable</p>
+              <p>Business for You</p>
             </div>
-            {/* Green Leaf Accent Icon */}
-            <div className="brush-leaf-icon">
-              <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
-                <path d="M17 3C13.5 3 11 5.5 11 8.5C11 9.8 11.4 11 12.1 12C9.5 12.6 7.5 14.8 7.5 17.5C7.5 20.5 9.8 22 12.5 22C15.5 22 18 19.8 18 16.8C18 15.2 17.3 13.8 16.2 12.8C17.3 11.8 18 10.3 18 8.5C18 5.5 17.5 3 17 3Z" fill="#2e7d32" opacity="0.9"/>
-                <path d="M7 6C4.8 6 3 7.8 3 10C3 11.3 3.6 12.5 4.6 13.3C3.6 14.1 3 15.3 3 16.6C3 19 5 21 7.5 21C10 21 12 19 12 16.6C12 15 11.1 13.6 9.8 12.8C11 11.8 11.8 10.3 11.8 8.6C11.8 6 9.2 6 7 6Z" fill="#388e3c"/>
-                <path d="M12.5 22C12.5 22 13 18 15.5 15" stroke="#1b5e20" strokeWidth="1.5" strokeLinecap="round"/>
+
+            {/* 3 Green Leaves Accent */}
+            <div className="brush-leaf-branch">
+              <svg width="58" height="58" viewBox="0 0 48 48" fill="none">
+                <path d="M30 8C22 8 16 14 16 22C16 26 17.2 29.2 19.2 32C12.8 33.6 8 38.4 8 44.4C8 44.4 17.6 44.4 24 36.4C26.8 38.4 30 39.6 34 39.6C42 39.6 48 33.2 48 25.2C48 21.2 46.4 17.6 43.6 14.8C44.4 12.4 44.8 10 44.8 7.6C44.8 7.6 38.4 7.6 30 8Z" fill="#2e7d32" opacity="0.95"/>
+                <path d="M18 16C10 16 3.6 22.4 3.6 30.4C3.6 34.4 4.8 37.6 6.8 40.4C2 42 -1.2 45.2 -1.2 46.4C-1.2 46.4 8.4 46.4 14.8 38.4 C17.6 40.4 20.8 41.6 24.8 41.6C32.8 41.6 38.8 35.2 38.8 27.2C38.8 23.2 37.2 19.6 34.4 16.8C35.2 14.4 35.6 12 35.6 9.6C35.6 9.6 29.2 9.6 18 16Z" fill="#388e3c"/>
+                <path d="M16 46C20 38 28 30 43 22" stroke="#1b5e20" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
