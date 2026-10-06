@@ -16,9 +16,14 @@ const Navbar = ({ onOpenWhatsApp }) => {
 
   return (
     <header className="navbar">
-      <div className="container nav-container">
+      <div className="nav-container">
+        {/* Official Sumoriya Logo image matching user upload */}
         <button type="button" className="brand-logo-wrapper" onClick={() => scrollTo('hero')} aria-label="Go to home">
-          <img src="/logo_original.png" alt="Sumoriya Organic Agro Gold Private Limited" className="brand-logo" />
+          <img 
+            src="/sumoriya-official-logo.png" 
+            alt="Sumoriya Organic Agro Gold Private Limited Logo" 
+            className="brand-logo-img" 
+          />
         </button>
 
         <nav aria-label="Primary navigation">

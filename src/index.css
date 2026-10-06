@@ -42,11 +42,48 @@ img{max-width:100%;display:block}
 .app-root{min-height:100vh}
 
 /* Header */
-.navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-.nav-container{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand-logo-wrapper{display:flex;align-items:center;min-width:max-content}
-.brand-logo{width:235px;height:auto}
-.nav-links-list{display:flex;align-items:center;gap:18px;list-style:none}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.nav-container {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-left: clamp(28px, 4.5vw, 68px);
+  padding-right: clamp(28px, 4.5vw, 68px);
+  width: 100%;
+}
+
+.brand-logo-wrapper {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.brand-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-links-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
 .nav-link-btn{position:relative;color:var(--ink);font-size:.84rem;font-weight:600;padding:8px 3px}
 .nav-link-btn:hover,.nav-link-btn.active{color:var(--orange)}
 .nav-link-btn.active::after{content:'';position:absolute;left:2px;right:2px;bottom:0;height:2px;background:var(--orange);border-radius:2px}
