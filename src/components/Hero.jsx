@@ -6,8 +6,18 @@ const Hero = ({ onOpenWhatsApp }) => {
 
   return (
     <section id="hero" className="hero-wrapper">
+      {/* Lab Image spanning across the background (No Box / No Border) */}
+      <div className="hero-bg-layer">
+        <img
+          src="/sumoriya-hero.png"
+          alt="Cordyceps cultivation lab expert and shelves"
+          className="hero-bg-img"
+          fetchPriority="high"
+        />
+        <div className="hero-gradient-overlay"></div>
+      </div>
+
       <div className="container hero-grid-layout">
-        
         {/* Left Column: Text Copy */}
         <div className="hero-copy">
           <div className="hero-tag">PRACTICAL TRAINING | CULTIVATION EXPERTISE | PRODUCTION SUPPORT</div>
@@ -29,21 +39,10 @@ const Hero = ({ onOpenWhatsApp }) => {
           </div>
         </div>
 
-        {/* Right Column: Lab Scientist Image Card + Designer Brush Quote Badge */}
-        <div className="hero-visual-frame">
-          <div className="hero-image-card">
-            <img
-              src="/sumoriya-hero.png"
-              alt="Cordyceps cultivation lab expert and shelves"
-              className="hero-lab-img"
-              fetchPriority="high"
-            />
-          </div>
-
-          {/* Designer Brush Quote Badge */}
+        {/* Right Column: Designer Brush Quote Badge */}
+        <div className="hero-right-badge-wrapper">
           <div className="brush-quote-badge">
             <svg className="brush-bg-svg" viewBox="0 0 340 145" fill="none" preserveAspectRatio="none">
-              {/* Organic Brush Stroke Ribbon Background */}
               <path 
                 d="M12 22C42 12 115 14 175 10C235 6 302 14 326 24C336 29 333 50 330 74C326 100 334 120 320 127C293 140 208 132 148 136C88 140 28 130 10 120C1 114 4 90 7 64C10 40 3 26 12 22Z" 
                 fill="#f7f2e4" 
@@ -72,7 +71,6 @@ const Hero = ({ onOpenWhatsApp }) => {
               <p>Business for You</p>
             </div>
 
-            {/* 3 Green Leaves Accent */}
             <div className="brush-leaf-branch">
               <svg width="58" height="58" viewBox="0 0 48 48" fill="none">
                 <path d="M30 8C22 8 16 14 16 22C16 26 17.2 29.2 19.2 32C12.8 33.6 8 38.4 8 44.4C8 44.4 17.6 44.4 24 36.4C26.8 38.4 30 39.6 34 39.6C42 39.6 48 33.2 48 25.2C48 21.2 46.4 17.6 43.6 14.8C44.4 12.4 44.8 10 44.8 7.6C44.8 7.6 38.4 7.6 30 8Z" fill="#2e7d32" opacity="0.95"/>
