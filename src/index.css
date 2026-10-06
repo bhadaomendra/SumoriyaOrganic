@@ -70,7 +70,7 @@ img{max-width:100%;display:block}
   right: 0;
   top: 0;
   bottom: 0;
-  width: 65%;
+  width: 78%;
   z-index: 1;
   overflow: hidden;
 }
@@ -85,13 +85,13 @@ img{max-width:100%;display:block}
 .hero-gradient-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #0b2117 0%, #0b2117 28%, rgba(11, 33, 23, 0.88) 48%, rgba(11, 33, 23, 0.35) 72%, transparent 100%);
+  background: linear-gradient(90deg, #0b2117 0%, #0b2117 22%, rgba(11, 33, 23, 0.72) 40%, rgba(11, 33, 23, 0.22) 60%, rgba(11, 33, 23, 0.05) 80%, transparent 100%);
   z-index: 2;
 }
 
 .hero-grid-layout {
   display: grid;
-  grid-template-columns: 1.12fr 0.88fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 36px;
   align-items: center;
   position: relative;
@@ -103,7 +103,7 @@ img{max-width:100%;display:block}
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 8px;
+  padding-left: clamp(28px, 4.5vw, 68px);
 }
 
 .hero-tag {
@@ -142,33 +142,33 @@ img{max-width:100%;display:block}
   flex-wrap: wrap;
 }
 
-/* Right Column: Floating Brush Quote Badge */
+/* Right Column: Floating Brush Quote Badge Near Scientist Head */
 .hero-right-badge-wrapper {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   min-height: 380px;
   position: relative;
   z-index: 10;
-  padding-right: 4px;
+  padding-right: 12px;
+  padding-top: 10px;
 }
 
 .brush-quote-badge {
   position: relative;
-  width: 320px;
-  height: 138px;
+  width: 275px;
+  height: 122px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(-1.5deg) scale(0.94);
+  transform: rotate(-1.5deg) scale(0.88);
   transition: transform 0.3s ease;
-  filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.45));
   z-index: 20;
-  margin-top: 50px;
 }
 
 .brush-quote-badge:hover {
-  transform: rotate(0deg) scale(0.98);
+  transform: rotate(0deg) scale(0.92);
 }
 
 .brush-bg-svg {
@@ -184,12 +184,12 @@ img{max-width:100%;display:block}
   z-index: 2;
   text-align: center;
   color: #103221;
-  padding: 0 22px 0 10px;
+  padding: 0 18px 0 8px;
 }
 
 .brush-text-content p {
   font-family: var(--serif);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 800;
   line-height: 1.25;
   color: #0e2f20;
@@ -199,9 +199,10 @@ img{max-width:100%;display:block}
 
 .brush-leaf-branch {
   position: absolute;
-  right: -10px;
-  bottom: -6px;
+  right: -8px;
+  bottom: -4px;
   z-index: 3;
+  transform: scale(0.85);
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
 }
 
