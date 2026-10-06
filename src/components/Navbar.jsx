@@ -17,10 +17,10 @@ const Navbar = ({ onOpenWhatsApp }) => {
   return (
     <header className="navbar">
       <div className="nav-container">
-        {/* Official Sumoriya Logo image matching user upload */}
+        {/* Official Sumoriya High-Res Transparent Logo */}
         <button type="button" className="brand-logo-wrapper" onClick={() => scrollTo('hero')} aria-label="Go to home">
           <img 
-            src="/sumoriya-official-logo.png" 
+            src="/sumoriya-official-logo-transparent.png" 
             alt="Sumoriya Organic Agro Gold Private Limited Logo" 
             className="brand-logo-img" 
           />
@@ -39,7 +39,7 @@ const Navbar = ({ onOpenWhatsApp }) => {
         </nav>
 
         <button type="button" onClick={onOpenWhatsApp} className="btn-pill btn-pill-green">
-          <MessageCircle size={17} color="#25d366" fill="#25d366" />
+          <MessageCircle size={18} color="#25d366" fill="#25d366" />
           Enquire on WhatsApp
         </button>
 
@@ -54,7 +54,7 @@ const Navbar = ({ onOpenWhatsApp }) => {
             <button key={label} type="button" onClick={() => scrollTo(id)}>{label}</button>
           ))}
           <button type="button" className="btn-pill btn-pill-green mobile-whatsapp" onClick={() => { setOpen(false); onOpenWhatsApp(); }}>
-            <MessageCircle size={17} color="#25d366" fill="#25d366" />
+            <MessageCircle size={18} color="#25d366" fill="#25d366" />
             Enquire on WhatsApp
           </button>
         </div>
