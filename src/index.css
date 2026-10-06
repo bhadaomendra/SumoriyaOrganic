@@ -301,9 +301,15 @@ img{max-width:100%;display:block}
   height: 310px;
 }
 
+.about-section-wrapper .container {
+  max-width: 1360px;
+  padding-left: clamp(16px, 3vw, 36px);
+  padding-right: clamp(16px, 3vw, 36px);
+}
+
 .about-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.85fr 0.88fr;
+  grid-template-columns: 1.32fr 0.85fr 0.88fr;
   gap: 30px;
   align-items: center;
   position: relative;
@@ -315,6 +321,7 @@ img{max-width:100%;display:block}
   flex-direction: column;
   align-items: flex-start;
   padding-left: 0;
+  margin-left: -8px;
 }
 
 .about-title {
