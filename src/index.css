@@ -586,5 +586,16 @@ img{max-width:100%;display:block}
 
 
 
+/* About section: image centered, equal gap on wide screens */
+@media (min-width: 1500px) {
+  .about-grid {
+    grid-template-columns: 428px 1fr 428px;
+  }
+  .about-center-col {
+    justify-content: center;
+  }
+}
+
+
 
 
