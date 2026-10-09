@@ -439,14 +439,6 @@ img{max-width:100%;display:block}
 .process-head{margin-bottom:42px}
 .process-title{font-family:var(--serif);font-size:clamp(2.3rem,3.2vw,3rem);line-height:1.05;margin-bottom:7px}
 .process-subtitle{color:var(--muted);font-size:.95rem}
-.process-grid{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:center}
-.process-card{position:relative;background:var(--cream);border:1px solid rgba(23,37,29,.08);border-radius:16px;padding:18px 18px 16px}
-.process-image-wrap{width:100%;height:180px;overflow:hidden;border-radius:13px;margin-bottom:16px}
-.process-image-wrap img{width:100%;height:100%;object-fit:cover}
-.process-number{position:absolute;left:16px;top:158px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:#fff;font-size:.76rem;font-weight:800;border:4px solid var(--cream)}
-.process-card-title{font-family:var(--serif);font-size:1.2rem;margin-bottom:5px}
-.process-card-desc{font-size:.78rem;color:var(--muted);line-height:1.5}
-.process-arrow{color:var(--orange);display:grid;place-items:center}
 
 /* Buyback */
 .buyback-section{background:var(--green-900);color:#fff;position:relative;overflow:hidden}
@@ -529,9 +521,6 @@ img{max-width:100%;display:block}
   .about-grid{grid-template-columns:1fr}
   .about-list{grid-column:auto}
   .about-image{height:280px}
-  .process-grid{grid-template-columns:1fr}
-  .process-arrow{transform:rotate(90deg);margin:0 auto}
-  .process-card{max-width:520px;width:100%;margin:0 auto}
   .buyback-grid,.cta-grid{grid-template-columns:1fr}
   .buyback-image{height:300px}
   .buyback-content-row{grid-template-columns:1fr}
@@ -613,5 +602,106 @@ img{max-width:100%;display:block}
   }
   .about-center-col {
     justify-content: center;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   Our Process: 6 round-photo steps in one row (desktop), wrapping to
+   3 columns on tablet and 2 columns on mobile.
+------------------------------------------------------------------- */
+.process-flow {
+  --circle: clamp(120px, 11.5vw, 190px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+}
+.process-step {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.process-circle {
+  position: relative;
+  width: var(--circle);
+  height: var(--circle);
+  margin-bottom: 30px;
+}
+.process-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 28px rgba(23, 37, 29, .16), 0 0 0 1px rgba(23, 37, 29, .06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.process-step:hover .process-circle img {
+  transform: scale(1.04);
+  box-shadow: 0 14px 34px rgba(23, 37, 29, .22), 0 0 0 1px rgba(232, 104, 38, .35);
+}
+.process-num {
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #173b29;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 800;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(23, 37, 29, .25);
+}
+.process-step-title {
+  font-family: var(--sans, inherit);
+  font-size: clamp(.98rem, 1.12vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 0 4px;
+  padding: 0 6px;
+}
+.process-step-sub {
+  font-size: clamp(.84rem, .95vw, .98rem);
+  line-height: 1.35;
+  color: var(--muted);
+  margin: 0;
+  padding: 0 6px;
+}
+.process-arrow {
+  flex: 0 0 26px;
+  height: var(--circle);
+  display: grid;
+  place-items: center;
+  color: var(--orange);
+}
+
+@media (max-width: 1100px) {
+  .process-flow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    --circle: clamp(130px, 22vw, 190px);
+    gap: 44px 16px;
+  }
+  .process-arrow { display: none; }
+}
+@media (max-width: 560px) {
+  .process-flow {
+    grid-template-columns: repeat(2, 1fr);
+    --circle: min(38vw, 160px);
+    gap: 36px 12px;
   }
 }
