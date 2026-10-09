@@ -588,3 +588,19 @@ img{max-width:100%;display:block}
 
 
 
+
+
+/* ------------------------------------------------------------------
+   About section: image centered, equal gap to the left text and to
+   the right card on wide screens. Side columns are fixed to the text
+   width (title is ~428px at its max size) so the extra space is split
+   evenly on both sides of the image.
+------------------------------------------------------------------- */
+@media (min-width: 1500px) {
+  .about-grid {
+    grid-template-columns: 428px 1fr 428px;
+  }
+  .about-center-col {
+    justify-content: center;
+  }
+}
