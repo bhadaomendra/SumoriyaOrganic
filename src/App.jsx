@@ -16,7 +16,7 @@ function App() {
 
   const openWhatsApp = () => {
     const text = encodeURIComponent("Hello Sumoriya Organic! I want details on Cordyceps Production Unit training, setup & buyback guarantee.");
-    window.open(`https://wa.me/919829000000?text=${text}`, '_blank');
+    window.open(`https://wa.me/919358463311?text=${text}`, '_blank');
   };
 
   return (

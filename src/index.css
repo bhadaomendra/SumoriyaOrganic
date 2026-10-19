@@ -838,3 +838,8 @@ img{max-width:100%;display:block}
 @media (max-width: 560px) {
   .cta-section{padding-bottom:70px}
 }
+
+
+/* Footer contact links */
+.footer-contact-item a{color:inherit;transition:color .2s ease}
+.footer-contact-item a:hover{color:#fff;text-decoration:underline}

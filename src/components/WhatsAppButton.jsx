@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react';
 const WhatsAppButton = () => {
   const handleClick = () => {
     const text = encodeURIComponent('Namaste! Mujhe Sumoriya Organic Cordyceps training, production setup aur buyback support ki jankari chahiye.');
-    window.open(`https://wa.me/919829000000?text=${text}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/919358463311?text=${text}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
