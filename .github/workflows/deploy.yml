@@ -38,3 +38,5 @@ jobs:
           server-dir: ./
           dangerous-clean-slate: false
           log-level: standard
+
+# Deployment trigger: keep homepage-final-design synced to Domainz after the merged homepage code.
