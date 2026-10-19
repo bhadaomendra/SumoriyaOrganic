@@ -13,7 +13,7 @@ const CtaBanner = ({ onOpenWhatsApp, onOpenContact }) => (
         </div>
       </div>
       <div className="cta-visual">
-        <img src="/about_jar.jpg" alt="Cordyceps cultivation jars" loading="lazy" />
+        <img src="/about_jar.jpg" alt="Cordyceps cultivation jars" width="1024" height="1024" loading="lazy" decoding="async" />
       </div>
     </div>
   </section>

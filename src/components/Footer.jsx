@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="container">
       <div className="footer-grid">
         <div>
-          <img src="/logo_original.png" alt="Sumoriya Organic Agro Gold Private Limited" className="footer-logo" />
+          <img src="/sumoriya-official-logo-transparent.png" alt="Sumoriya Organic Agro Gold Private Limited" className="footer-logo" width="1024" height="342" />
           <p className="footer-description">
             Practical Cordyceps cultivation training, production unit setup guidance, expert consultation and structured buyback support for eligible production partners across India.
           </p>
