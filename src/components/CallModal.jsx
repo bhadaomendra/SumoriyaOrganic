@@ -82,7 +82,7 @@ const CallModal = ({ isOpen, onClose }) => {
                 <input 
                   type="tel" 
                   required 
-                  placeholder="e.g. 98290XXXXX"
+                  placeholder="e.g. 9XXXXXXXXX"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   style={{ width: '100%', padding: '12px 14px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', outline: 'none', fontSize: '0.95rem' }}

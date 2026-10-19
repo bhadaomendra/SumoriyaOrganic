@@ -1,12 +1,17 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
+/*
+  Gallery photos live in /public/gallery/g1.jpg ... g5.jpg.
+  To change one, replace the file with the same name
+  (landscape or square, 1200px wide or larger).
+*/
 const images = [
-  ['/gal1.png','Practical Lab Training'],
-  ['/gal2.png','Cultivation Racks'],
-  ['/gal3.png','Cordyceps Production'],
-  ['/gal4.png','Expert Guidance'],
-  ['/gal5.png','Production Facility']
+  ['/gallery/g1.jpg','Practical Lab Training'],
+  ['/gallery/g2.jpg','Cultivation Racks'],
+  ['/gallery/g3.jpg','Cordyceps Production'],
+  ['/gallery/g4.jpg','Culture Preparation'],
+  ['/gallery/g5.jpg','Drying and Preservation']
 ];
 
 const WorkInActionSection = () => (
@@ -23,7 +28,7 @@ const WorkInActionSection = () => (
       <div className="gallery-grid">
         {images.map(([src,title]) => (
           <div className="gallery-item" key={src}>
-            <img src={src} alt={title} loading="lazy" />
+            <img src={src} alt={title} width="1200" height="1000" loading="lazy" decoding="async" />
           </div>
         ))}
       </div>

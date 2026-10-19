@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="container">
       <div className="footer-grid">
         <div>
-          <img src="/logo_original.png" alt="Sumoriya Organic Agro Gold Private Limited" className="footer-logo" />
+          <img src="/sumoriya-official-logo-transparent.png" alt="Sumoriya Organic Agro Gold Private Limited" className="footer-logo" width="1024" height="342" />
           <p className="footer-description">
             Practical Cordyceps cultivation training, production unit setup guidance, expert consultation and structured buyback support for eligible production partners across India.
           </p>
@@ -28,8 +28,8 @@ const Footer = () => (
           <h3 className="footer-heading">Contact</h3>
           <div className="footer-contact">
             <div className="footer-contact-item"><MapPin size={16} color="var(--gold)" /><span>India-wide support</span></div>
-            <div className="footer-contact-item"><Phone size={16} color="var(--gold)" /><span>+91 93584 63311</span></div>
-            <div className="footer-contact-item"><Mail size={16} color="var(--gold)" /><span>sumoriyaorganic@gmail.com</span></div>
+            <div className="footer-contact-item"><Phone size={16} color="var(--gold)" /><a href="tel:+919358463311">+91 93584 63311</a></div>
+            <div className="footer-contact-item"><Mail size={16} color="var(--gold)" /><a href="mailto:sumoriyaorganic@gmail.com">sumoriyaorganic@gmail.com</a></div>
           </div>
         </div>
       </div>
