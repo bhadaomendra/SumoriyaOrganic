@@ -28,8 +28,8 @@ const Footer = () => (
           <h3 className="footer-heading">Contact</h3>
           <div className="footer-contact">
             <div className="footer-contact-item"><MapPin size={16} color="var(--gold)" /><span>India-wide support</span></div>
-            <div className="footer-contact-item"><Phone size={16} color="var(--gold)" /><span>+91 98290 00000</span></div>
-            <div className="footer-contact-item"><Mail size={16} color="var(--gold)" /><span>info@sumoriyaorganic.com</span></div>
+            <div className="footer-contact-item"><Phone size={16} color="var(--gold)" /><span>+91 93584 63311</span></div>
+            <div className="footer-contact-item"><Mail size={16} color="var(--gold)" /><span>sumoriyaorganic@gmail.com</span></div>
           </div>
         </div>
       </div>
