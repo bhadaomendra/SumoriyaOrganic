@@ -17,7 +17,7 @@ const ContactForm = ({ isOpen, onClose }) => {
     setTimeout(() => {
       // Automatic WhatsApp redirection option
       const message = `Namaste Sumoriya Organic! Mera naam ${formData.name} hai (${formData.city}). Main mushroom farming setup ki jankari chahta hoon. Space: ${formData.spaceSize}. Phone: ${formData.phone}`;
-      const url = `https://wa.me/919829000000?text=${encodeURIComponent(message)}`;
+      const url = `https://wa.me/919358463311?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     }, 1200);
   };
@@ -67,7 +67,7 @@ const ContactForm = ({ isOpen, onClose }) => {
                   <input 
                     type="tel"
                     required
-                    placeholder="e.g. 98290XXXXX"
+                    placeholder="e.g. 9XXXXXXXXX"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     style={{ width: '100%', padding: '12px 16px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border)', fontSize: '0.95rem', outline: 'none' }}
