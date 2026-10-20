@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = ({ onOpenWhatsApp }) => {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
 
   const links = [
     ['Home', '/'],
