@@ -14,9 +14,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Restore locked Home stylesheet
-        run: git checkout 3cd154d2246e6d364fd4bbe3be9c9704ff622bdb -- src/index.css
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

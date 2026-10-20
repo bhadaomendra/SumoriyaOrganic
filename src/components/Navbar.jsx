@@ -1,45 +1,38 @@
 import React, { useState } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
-import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = ({ onOpenWhatsApp }) => {
   const [open, setOpen] = useState(false);
 
-  const links = [
-    ['Home', '/'],
-    ['About', '/about-us'],
-    ['Cordyceps', '/cordyceps'],
-    ['Training', '/training'],
-    ['Production Setup', '/production-unit'],
-    ['Buyback Guarantee', '/buyback-guarantee'],
-    ['Contact', '/contact'],
-  ];
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setOpen(false);
+  };
 
-  const closeMenu = () => setOpen(false);
+  const links = [
+    ['Home','hero'],['About','about'],['Cordyceps','about'],['Training','gallery'],
+    ['Production Setup','process'],['Buyback','buyback'],['Gallery','gallery'],['Contact','contact']
+  ];
 
   return (
     <header className="navbar">
       <div className="nav-container">
-        <Link to="/" className="brand-logo-wrapper" onClick={closeMenu} aria-label="Go to home">
-          <img
-            src="/sumoriya-official-logo-transparent.png"
-            alt="Sumoriya Organic Agro Gold Private Limited Logo"
-            className="brand-logo-img"
+        {/* Official Sumoriya High-Res Transparent Logo */}
+        <button type="button" className="brand-logo-wrapper" onClick={() => scrollTo('hero')} aria-label="Go to home">
+          <img 
+            src="/sumoriya-official-logo-transparent.png" 
+            alt="Sumoriya Organic Agro Gold Private Limited Logo" 
+            className="brand-logo-img" 
           />
-        </Link>
+        </button>
 
         <nav aria-label="Primary navigation">
           <ul className="nav-links-list">
-            {links.map(([label, path]) => (
+            {links.map(([label,id], index) => (
               <li key={label}>
-                <NavLink
-                  to={path}
-                  end={path === '/'}
-                  onClick={closeMenu}
-                  className={({ isActive }) => `nav-link-btn ${isActive ? 'active' : ''}`}
-                >
+                <button type="button" onClick={() => scrollTo(id)} className={index === 0 ? 'nav-link-btn active' : 'nav-link-btn'}>
                   {label}
-                </NavLink>
+                </button>
               </li>
             ))}
           </ul>
@@ -57,18 +50,10 @@ const Navbar = ({ onOpenWhatsApp }) => {
 
       {open && (
         <div className="mobile-nav">
-          {links.map(([label, path]) => (
-            <NavLink
-              key={label}
-              to={path}
-              end={path === '/'}
-              onClick={closeMenu}
-              className={({ isActive }) => isActive ? 'active' : ''}
-            >
-              {label}
-            </NavLink>
+          {links.map(([label,id]) => (
+            <button key={label} type="button" onClick={() => scrollTo(id)}>{label}</button>
           ))}
-          <button type="button" className="btn-pill btn-pill-green mobile-whatsapp" onClick={() => { closeMenu(); onOpenWhatsApp(); }}>
+          <button type="button" className="btn-pill btn-pill-green mobile-whatsapp" onClick={() => { setOpen(false); onOpenWhatsApp(); }}>
             <MessageCircle size={18} color="#25d366" fill="#25d366" />
             Enquire on WhatsApp
           </button>
