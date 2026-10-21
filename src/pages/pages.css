@@ -1,0 +1,239 @@
+/* Isolated styles for inner pages - Sumoriya Organic */
+/* All rules strictly scoped with .inner-page-* to prevent any leak to HomePage */
+
+.inner-page-wrapper {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-page-hero {
+  background: linear-gradient(135deg, #0b2117 0%, #102b1e 55%, #173b29 100%);
+  color: #ffffff;
+  padding: 68px 0 54px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--gold);
+}
+
+.inner-page-hero::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(214, 154, 54, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.inner-page-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 18px;
+}
+
+.inner-page-breadcrumb a {
+  color: var(--gold);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.inner-page-breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.inner-page-breadcrumb-separator {
+  opacity: 0.5;
+}
+
+.inner-page-tag {
+  display: inline-block;
+  background: rgba(233, 107, 37, 0.18);
+  border: 1px solid rgba(233, 107, 37, 0.4);
+  color: #ff9d66;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: var(--pill);
+  margin-bottom: 14px;
+}
+
+.inner-page-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 2.85rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.inner-page-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 780px;
+}
+
+/* Page Body & Scaffold Cards */
+.inner-page-content {
+  padding: 60px 0 80px;
+  background: var(--cream);
+  flex: 1;
+}
+
+.inner-page-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding: 8px 16px;
+  border-radius: var(--pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--green-800);
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.inner-page-status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--orange);
+  animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+.inner-page-intro-box {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 36px 32px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.inner-page-intro-box h2 {
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.inner-page-intro-box p {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.inner-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 44px;
+}
+
+.inner-page-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-page-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+}
+
+.inner-page-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(233, 107, 37, 0.1);
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.inner-page-card-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.inner-page-card-desc {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Call to action inside inner pages */
+.inner-page-cta-box {
+  background: linear-gradient(135deg, var(--green-900), var(--green-800));
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 12px 32px rgba(11, 33, 23, 0.16);
+}
+
+.inner-page-cta-text h3 {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  margin-bottom: 8px;
+}
+
+.inner-page-cta-text p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  max-width: 580px;
+}
+
+.inner-page-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+@media (max-width: 768px) {
+  .inner-page-hero {
+    padding: 44px 0 36px;
+  }
+  .inner-page-content {
+    padding: 36px 0 54px;
+  }
+  .inner-page-intro-box {
+    padding: 24px 20px;
+  }
+  .inner-page-cta-box {
+    padding: 28px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

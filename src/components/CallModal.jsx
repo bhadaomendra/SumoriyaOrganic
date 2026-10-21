@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { X, Send, CheckCircle } from 'lucide-react';
 
 const CallModal = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
   const [formData, setFormData] = useState({ name: '', phone: '', city: '' });
   const [done, setDone] = useState(false);
+
+  if (!isOpen) return null;
 
   const handleSubmit = (e) => {
     e.preventDefault();

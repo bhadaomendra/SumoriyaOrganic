@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => (
@@ -6,7 +7,9 @@ const Footer = () => (
     <div className="container">
       <div className="footer-grid">
         <div>
-          <img src="/sumoriya-official-logo-transparent.png" alt="Sumoriya Organic Agro Gold Private Limited" className="footer-logo" width="1024" height="342" />
+          <Link to="/" aria-label="Go to home">
+            <img src="/sumoriya-official-logo-transparent.png" alt="Sumoriya Organic Agro Gold Private Limited" className="footer-logo" width="1024" height="342" />
+          </Link>
           <p className="footer-description">
             Practical Cordyceps cultivation training, production unit setup guidance, expert consultation and structured buyback support for eligible production partners across India.
           </p>
@@ -15,12 +18,13 @@ const Footer = () => (
         <div>
           <h3 className="footer-heading">Quick Links</h3>
           <ul className="footer-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#process">Production Setup</a></li>
-            <li><a href="#gallery">Training & Gallery</a></li>
-            <li><a href="#buyback">Buyback</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/cordyceps">Cordyceps Militaris</Link></li>
+            <li><Link to="/training">Training & Courses</Link></li>
+            <li><Link to="/production-setup">Production Setup</Link></li>
+            <li><Link to="/buyback">Buyback Guarantee</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
 
