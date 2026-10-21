@@ -52,7 +52,6 @@ const Navbar = ({ onOpenWhatsApp }) => {
     ['Cordyceps Militaris', 'cordyceps'],
     ['Training', 'training'],
     ['Production Setup', 'setup'],
-    ['Buyback', 'buyback'],
     ['Gallery', 'gallery'],
     ['Contact', 'contact']
   ];
