@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
 import CordycepsPage from './pages/CordycepsPage';
 import TrainingPage from './pages/TrainingPage';
+import ProductionSetupPage from './pages/ProductionSetupPage';
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -67,6 +68,17 @@ function App() {
         <Route path="/training" element={<Navigate to="/cordyceps-cultivation-training" replace />} />
         <Route path="/cordyceps-training" element={<Navigate to="/cordyceps-cultivation-training" replace />} />
         <Route path="/courses" element={<Navigate to="/cordyceps-cultivation-training" replace />} />
+        <Route
+          path="/production-unit-setup"
+          element={
+            <ProductionSetupPage
+              onOpenWhatsApp={openWhatsApp}
+              onOpenContact={() => setModalOpen(true)}
+            />
+          }
+        />
+        <Route path="/production-setup" element={<Navigate to="/production-unit-setup" replace />} />
+        <Route path="/production" element={<Navigate to="/production-unit-setup" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

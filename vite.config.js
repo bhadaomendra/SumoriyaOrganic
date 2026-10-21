@@ -22,7 +22,10 @@ function spaRoutesPlugin() {
         'cordyceps-militaris',
         'cordyceps-cultivation-training',
         'training',
-        'cordyceps-training'
+        'cordyceps-training',
+        'production-unit-setup',
+        'production-setup',
+        'production'
       ]
 
       routes.forEach((route) => {

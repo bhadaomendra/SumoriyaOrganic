@@ -1,0 +1,1331 @@
+/* ==========================================================================
+   PRODUCTION UNIT SETUP PAGE - STRICTLY SCOPED STYLES
+   All rules begin with .setup-page to ensure zero CSS leakage into Home Page.
+   ========================================================================== */
+
+.setup-page {
+  background-color: var(--sand, #f4efe6);
+  color: #1f2937;
+  font-family: inherit;
+  min-height: 100vh;
+}
+
+/* Breadcrumb Navigation */
+.setup-page .setup-breadcrumb {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(11, 33, 23, 0.08);
+  padding: 0.85rem 0;
+  font-size: 0.88rem;
+}
+
+.setup-page .setup-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #555555;
+}
+
+.setup-page .setup-breadcrumb-list a {
+  color: var(--forest, #1b4332);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.setup-page .setup-breadcrumb-list a:hover {
+  color: var(--gold, #c99738);
+}
+
+.setup-page .setup-breadcrumb-sep {
+  color: #999999;
+}
+
+.setup-page .setup-breadcrumb-list li[aria-current="page"] {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Badge & Section Tags */
+.setup-page .setup-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(201, 151, 56, 0.15);
+  border: 1px solid rgba(201, 151, 56, 0.35);
+  border-radius: 9999px;
+  color: var(--gold-dark, #9e7424);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.setup-page .setup-section-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold, #c99738);
+  margin-bottom: 0.5rem;
+}
+
+.setup-page .setup-section-title {
+  font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--dark, #0b2117);
+  margin-bottom: 1rem;
+}
+
+.setup-page .setup-section-subtitle {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.setup-page .text-center {
+  text-align: center;
+}
+
+.setup-page .setup-gold-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold, #c99738), var(--gold-light, #dfb76c));
+  border-radius: 2px;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.setup-page .setup-section {
+  padding: 5rem 0;
+}
+
+/* Buttons */
+.setup-page .setup-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.9rem 1.65rem;
+  font-size: 0.95rem;
+  font-weight: 650;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  line-height: 1.2;
+}
+
+.setup-page .setup-btn-primary {
+  background: var(--dark, #0b2117);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(11, 33, 23, 0.18);
+}
+
+.setup-page .setup-btn-primary:hover {
+  background: var(--forest, #1b4332);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(11, 33, 23, 0.25);
+  color: #ffffff;
+}
+
+.setup-page .setup-btn-secondary {
+  background: #ffffff;
+  color: var(--dark, #0b2117);
+  border: 1.5px solid rgba(11, 33, 23, 0.25);
+}
+
+.setup-page .setup-btn-secondary:hover {
+  background: rgba(11, 33, 23, 0.04);
+  border-color: var(--dark, #0b2117);
+  transform: translateY(-2px);
+  color: var(--dark, #0b2117);
+}
+
+.setup-page .setup-btn-gold {
+  background: linear-gradient(135deg, #c99738, #dfb76c);
+  color: #0b2117;
+  font-weight: 750;
+  box-shadow: 0 4px 16px rgba(201, 151, 56, 0.3);
+}
+
+.setup-page .setup-btn-gold:hover {
+  background: linear-gradient(135deg, #b88628, #cf9e50);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 151, 56, 0.4);
+  color: #0b2117;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.setup-page .setup-hero {
+  padding: 4rem 0 4.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--sand, #f4efe6) 100%);
+  border-bottom: 1px solid rgba(11, 33, 23, 0.08);
+}
+
+.setup-page .setup-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.setup-page .setup-hero-title {
+  font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+  font-weight: 850;
+  line-height: 1.15;
+  color: var(--dark, #0b2117);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.setup-page .setup-hero-subheading {
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 650;
+  color: var(--gold-dark, #9e7424);
+  margin-bottom: 1.25rem;
+  line-height: 1.35;
+}
+
+.setup-page .setup-hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 620px;
+}
+
+.setup-page .setup-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+.setup-page .setup-hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(11, 33, 23, 0.1);
+}
+
+.setup-page .setup-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark, #0b2117);
+}
+
+.setup-page .setup-check-icon {
+  color: var(--gold, #c99738);
+  flex-shrink: 0;
+}
+
+.setup-page .setup-hero-visual {
+  position: relative;
+}
+
+.setup-page .setup-hero-image-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(11, 33, 23, 0.16);
+  border: 4px solid #ffffff;
+}
+
+.setup-page .setup-hero-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3.4;
+  object-fit: cover;
+  display: block;
+}
+
+.setup-page .setup-hero-glass-card {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  background: rgba(11, 33, 23, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.1rem 1.35rem;
+  border-radius: 16px;
+  border: 1px solid rgba(201, 151, 56, 0.4);
+  color: #ffffff;
+}
+
+.setup-page .setup-glass-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold-light, #dfb76c);
+  font-size: 0.85rem;
+  font-weight: 750;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.setup-page .setup-glass-text {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #e5e7eb;
+  margin: 0;
+}
+
+/* ==========================================================================
+   2. SECTION 2: CORDYCEPS PRODUCTION UNIT SETUP IN INDIA
+   ========================================================================== */
+.setup-page .setup-overview-section {
+  background: #ffffff;
+}
+
+.setup-page .setup-overview-card {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+  background: var(--sand, #f4efe6);
+  border-radius: 24px;
+  padding: 3.5rem;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+}
+
+.setup-page .setup-overview-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 1.25rem;
+}
+
+.setup-page .setup-overview-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.setup-page .setup-overview-feat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: #ffffff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(11, 33, 23, 0.05);
+  border: 1px solid rgba(11, 33, 23, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.setup-page .setup-overview-feat-item:hover {
+  transform: translateX(4px);
+  border-color: var(--gold, #c99738);
+}
+
+.setup-page .setup-feat-num {
+  font-size: 1.35rem;
+  font-weight: 850;
+  color: var(--gold, #c99738);
+  line-height: 1;
+  padding-top: 0.2rem;
+}
+
+.setup-page .setup-feat-title {
+  font-size: 1rem;
+  font-weight: 750;
+  color: var(--dark, #0b2117);
+  margin-bottom: 0.35rem;
+}
+
+.setup-page .setup-feat-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ==========================================================================
+   3. SECTION 3: WHAT GOES INTO A PRODUCTION UNIT (9 CARDS)
+   ========================================================================== */
+.setup-page .setup-components-section {
+  background: var(--sand, #f4efe6);
+}
+
+.setup-page .setup-components-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 3rem;
+}
+
+.setup-page .setup-component-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+  box-shadow: 0 6px 18px rgba(11, 33, 23, 0.04);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.setup-page .setup-component-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(11, 33, 23, 0.1);
+  border-color: var(--gold, #c99738);
+}
+
+.setup-page .setup-component-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(201, 151, 56, 0.12);
+  color: var(--gold-dark, #9e7424);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.35rem;
+}
+
+.setup-page .setup-component-title {
+  font-size: 1.18rem;
+  font-weight: 750;
+  color: var(--dark, #0b2117);
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.setup-page .setup-component-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ==========================================================================
+   4. SECTION 4: PROCESS TIMELINE (7 STEPS)
+   ========================================================================== */
+.setup-page .setup-timeline-section {
+  background: #ffffff;
+}
+
+.setup-page .setup-timeline-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.setup-page .setup-timeline-step {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+  gap: 1.75rem;
+  background: var(--sand, #f4efe6);
+  padding: 1.5rem 2rem;
+  border-radius: 18px;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.setup-page .setup-timeline-step:hover {
+  transform: scale(1.01);
+  border-color: var(--gold, #c99738);
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(11, 33, 23, 0.08);
+}
+
+.setup-page .setup-timeline-step-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: var(--dark, #0b2117);
+  color: var(--gold-light, #dfb76c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.setup-page .setup-timeline-step-title {
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: var(--dark, #0b2117);
+  margin-bottom: 0.35rem;
+}
+
+.setup-page .setup-timeline-step-desc {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #4b5563;
+  margin: 0;
+}
+
+.setup-page .setup-timeline-connector {
+  position: absolute;
+  bottom: -22px;
+  left: 45px;
+  transform: rotate(90deg);
+  color: var(--gold, #c99738);
+  z-index: 2;
+}
+
+/* ==========================================================================
+   5. SECTION 5: PLAN YOUR CORDYCEPS PRODUCTION UNIT
+   ========================================================================== */
+.setup-page .setup-planning-section {
+  background: var(--sand, #f4efe6);
+}
+
+.setup-page .setup-planning-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.setup-page .setup-planning-p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 1.75rem;
+}
+
+.setup-page .setup-planning-quote-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.35rem 1.65rem;
+  background: #ffffff;
+  border-radius: 16px;
+  border-left: 4px solid var(--gold, #c99738);
+  box-shadow: 0 4px 12px rgba(11, 33, 23, 0.04);
+}
+
+.setup-page .setup-gold-icon {
+  color: var(--gold, #c99738);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.setup-page .setup-planning-quote-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--dark, #0b2117);
+  margin: 0;
+  font-weight: 500;
+}
+
+.setup-page .setup-planning-checklist-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.75rem;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+  box-shadow: 0 10px 30px rgba(11, 33, 23, 0.06);
+}
+
+.setup-page .setup-checklist-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--dark, #0b2117);
+  margin-bottom: 0.35rem;
+}
+
+.setup-page .setup-checklist-subtitle {
+  font-size: 0.92rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.setup-page .setup-checklist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.setup-page .setup-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #1f2937;
+  font-weight: 550;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(11, 33, 23, 0.02);
+}
+
+.setup-page .setup-checklist-icon {
+  color: var(--forest, #1b4332);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   6. SECTION 6: KEY AREAS OF A PRODUCTION UNIT
+   ========================================================================== */
+.setup-page .setup-areas-section {
+  background: #ffffff;
+}
+
+.setup-page .setup-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.setup-page .setup-area-card {
+  background: var(--sand, #f4efe6);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+  box-shadow: 0 6px 18px rgba(11, 33, 23, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease;
+}
+
+.setup-page .setup-area-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold, #c99738);
+}
+
+.setup-page .setup-area-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.setup-page .setup-area-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.setup-page .setup-area-card:hover .setup-area-img {
+  transform: scale(1.05);
+}
+
+.setup-page .setup-area-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(11, 33, 23, 0.85);
+  color: var(--gold-light, #dfb76c);
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+}
+
+.setup-page .setup-area-content {
+  padding: 1.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.setup-page .setup-area-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--dark, #0b2117);
+  margin-bottom: 0.6rem;
+}
+
+.setup-page .setup-area-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+.setup-page .setup-area-note-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--sand, #f4efe6);
+  border: 1px dashed rgba(11, 33, 23, 0.25);
+  border-radius: 14px;
+  padding: 1.25rem 2rem;
+  margin-top: 2.75rem;
+  font-size: 0.92rem;
+  color: #4b5563;
+  text-align: center;
+}
+
+.setup-page .setup-note-icon {
+  color: var(--gold-dark, #9e7424);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   7. SECTION 7: CONTROLLED ENVIRONMENT FOR CORDYCEPS CULTIVATION
+   ========================================================================== */
+.setup-page .setup-environment-section {
+  background: var(--dark, #0b2117);
+  color: #ffffff;
+}
+
+.setup-page .setup-environment-section .setup-section-title {
+  color: #ffffff;
+}
+
+.setup-page .setup-environment-section .setup-section-subtitle {
+  color: #d1d5db;
+}
+
+.setup-page .setup-env-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.setup-page .setup-env-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 2rem 1.75rem;
+  transition: all 0.25s ease;
+}
+
+.setup-page .setup-env-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--gold, #c99738);
+  transform: translateY(-4px);
+}
+
+.setup-page .setup-env-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(201, 151, 56, 0.2);
+  color: var(--gold-light, #dfb76c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.setup-page .setup-env-name {
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.setup-page .setup-env-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ==========================================================================
+   8. SECTION 8: EQUIPMENT PLANNING
+   ========================================================================== */
+.setup-page .setup-equipment-section {
+  background: #ffffff;
+}
+
+.setup-page .setup-equipment-box {
+  background: var(--sand, #f4efe6);
+  border-radius: 28px;
+  padding: 4rem 3.5rem;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+}
+
+.setup-page .setup-equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.setup-page .setup-equipment-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  border: 1px solid rgba(11, 33, 23, 0.06);
+  box-shadow: 0 4px 12px rgba(11, 33, 23, 0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.setup-page .setup-equipment-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold, #c99738);
+}
+
+.setup-page .setup-equipment-num {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--gold, #c99738);
+  background: rgba(201, 151, 56, 0.1);
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+.setup-page .setup-equipment-title {
+  font-size: 1.05rem;
+  font-weight: 750;
+  color: var(--dark, #0b2117);
+  margin-bottom: 0.35rem;
+}
+
+.setup-page .setup-equipment-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #4b5563;
+  margin: 0;
+}
+
+.setup-page .setup-equipment-cta-wrapper {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   9. SECTION 9: NEW UNIT VS EXISTING UNIT
+   ========================================================================== */
+.setup-page .setup-options-section {
+  background: var(--sand, #f4efe6);
+}
+
+.setup-page .setup-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.setup-page .setup-option-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 3.25rem 2.75rem;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+  box-shadow: 0 10px 30px rgba(11, 33, 23, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease;
+}
+
+.setup-page .setup-option-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold, #c99738);
+}
+
+.setup-page .setup-option-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.setup-page .setup-option-new .setup-option-badge {
+  background: rgba(27, 67, 50, 0.12);
+  color: var(--forest, #1b4332);
+}
+
+.setup-page .setup-option-existing .setup-option-badge {
+  background: rgba(201, 151, 56, 0.15);
+  color: var(--gold-dark, #9e7424);
+}
+
+.setup-page .setup-option-title {
+  font-size: 1.5rem;
+  font-weight: 850;
+  color: var(--dark, #0b2117);
+  margin-bottom: 0.75rem;
+}
+
+.setup-page .setup-option-desc {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #4b5563;
+  margin-bottom: 1.75rem;
+}
+
+.setup-page .setup-option-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+}
+
+.setup-page .setup-option-points li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: #1f2937;
+  font-weight: 550;
+}
+
+.setup-page .setup-option-points svg {
+  color: var(--forest, #1b4332);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   10. SECTION 10: BENEFICIARIES
+   ========================================================================== */
+.setup-page .setup-beneficiaries-section {
+  background: #ffffff;
+}
+
+.setup-page .setup-beneficiaries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.setup-page .setup-beneficiary-card {
+  background: var(--sand, #f4efe6);
+  border-radius: 18px;
+  padding: 1.85rem 1.65rem;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.setup-page .setup-beneficiary-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold, #c99738);
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(11, 33, 23, 0.06);
+}
+
+.setup-page .setup-beneficiary-icon {
+  color: var(--gold, #c99738);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.setup-page .setup-beneficiary-title {
+  font-size: 1.1rem;
+  font-weight: 750;
+  color: var(--dark, #0b2117);
+  margin-bottom: 0.35rem;
+}
+
+.setup-page .setup-beneficiary-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ==========================================================================
+   11. SECTION 11: ALREADY COMPLETED TRAINING?
+   ========================================================================== */
+.setup-page .setup-training-link-section {
+  background: var(--sand, #f4efe6);
+}
+
+.setup-page .setup-banner-card {
+  background: linear-gradient(135deg, var(--dark, #0b2117) 0%, #133827 100%);
+  border-radius: 28px;
+  padding: 4rem 3.5rem;
+  color: #ffffff;
+  border: 1px solid rgba(201, 151, 56, 0.3);
+  box-shadow: 0 16px 40px rgba(11, 33, 23, 0.2);
+  text-align: center;
+}
+
+.setup-page .setup-banner-title {
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 850;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.setup-page .setup-banner-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #d1d5db;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.setup-page .setup-process-strip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  padding: 0.75rem 1.85rem;
+  margin-bottom: 2.75rem;
+}
+
+.setup-page .setup-strip-item {
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: #ffffff;
+}
+
+.setup-page .setup-strip-item.highlight {
+  color: var(--gold-light, #dfb76c);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.setup-page .setup-strip-arrow {
+  color: var(--gold, #c99738);
+  font-weight: 700;
+}
+
+.setup-page .setup-banner-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   12. SECTION 12: SUPPORT BEYOND PRODUCTION SETUP (BUYBACK)
+   ========================================================================== */
+.setup-page .setup-buyback-link-section {
+  background: #ffffff;
+}
+
+.setup-page .setup-buyback-box {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 3rem;
+  align-items: center;
+  background: var(--sand, #f4efe6);
+  border-radius: 24px;
+  padding: 3.5rem;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+}
+
+.setup-page .setup-buyback-desc {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.setup-page .setup-buyback-note {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark, #0b2117);
+}
+
+.setup-page .setup-buyback-action {
+  text-align: right;
+}
+
+/* ==========================================================================
+   13. SECTION 13: WHY CHOOSE SUMORIYA ORGANIC
+   ========================================================================== */
+.setup-page .setup-why-section {
+  background: var(--sand, #f4efe6);
+}
+
+.setup-page .setup-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.setup-page .setup-why-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+  box-shadow: 0 4px 14px rgba(11, 33, 23, 0.04);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.setup-page .setup-why-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold, #c99738);
+  box-shadow: 0 10px 24px rgba(11, 33, 23, 0.08);
+}
+
+.setup-page .setup-why-icon-box {
+  color: var(--forest, #1b4332);
+  margin-bottom: 1rem;
+}
+
+.setup-page .setup-why-title {
+  font-size: 1.08rem;
+  font-weight: 750;
+  color: var(--dark, #0b2117);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.setup-page .setup-why-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ==========================================================================
+   14. FAQ SECTION
+   ========================================================================== */
+.setup-page .setup-faq-section {
+  background: #ffffff;
+}
+
+.setup-page .setup-faq-list {
+  max-width: 860px;
+  margin: 3.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.setup-page .setup-faq-item {
+  background: var(--sand, #f4efe6);
+  border-radius: 16px;
+  border: 1px solid rgba(11, 33, 23, 0.08);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.setup-page .setup-faq-item.active {
+  border-color: var(--gold, #c99738);
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(11, 33, 23, 0.06);
+}
+
+.setup-page .setup-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.35rem 1.75rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark, #0b2117);
+  cursor: pointer;
+}
+
+.setup-page .setup-faq-chevron {
+  color: var(--gold-dark, #9e7424);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.setup-page .setup-faq-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.setup-page .setup-faq-answer {
+  padding: 0 1.75rem 1.5rem 1.75rem;
+}
+
+.setup-page .setup-faq-answer p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ==========================================================================
+   15. FINAL CTA SECTION
+   ========================================================================== */
+.setup-page .setup-final-cta {
+  background: var(--sand, #f4efe6);
+}
+
+.setup-page .setup-cta-card {
+  background: linear-gradient(135deg, var(--dark, #0b2117) 0%, #153c29 100%);
+  border-radius: 28px;
+  padding: 4.5rem 3.5rem;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid rgba(201, 151, 56, 0.35);
+  box-shadow: 0 20px 50px rgba(11, 33, 23, 0.25);
+}
+
+.setup-page .setup-cta-title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 850;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.setup-page .setup-cta-desc {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.setup-page .setup-cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .setup-page .setup-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .setup-page .setup-overview-card {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  .setup-page .setup-planning-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .setup-page .setup-components-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .setup-page .setup-areas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .setup-page .setup-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .setup-page .setup-buyback-box {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .setup-page .setup-buyback-action {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .setup-page .setup-section {
+    padding: 3.5rem 0;
+  }
+
+  .setup-page .setup-hero {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .setup-page .setup-components-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-page .setup-areas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-page .setup-equipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-page .setup-equipment-box {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .setup-page .setup-options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-page .setup-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-page .setup-timeline-step {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .setup-page .setup-timeline-step-badge {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+
+  .setup-page .setup-timeline-connector {
+    display: none;
+  }
+
+  .setup-page .setup-banner-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .setup-page .setup-cta-card {
+    padding: 3rem 1.5rem;
+  }
+
+  .setup-page .setup-planning-checklist-card {
+    padding: 2rem 1.5rem;
+  }
+}
