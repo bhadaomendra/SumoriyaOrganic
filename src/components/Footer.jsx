@@ -21,9 +21,10 @@ const Footer = () => (
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/cordyceps">Cordyceps Militaris</Link></li>
-            <li><Link to="/training">Training & Courses</Link></li>
-            <li><Link to="/production-setup">Production Setup</Link></li>
-            <li><Link to="/buyback">Buyback Guarantee</Link></li>
+            <li><Link to="/cordyceps-cultivation-training">Training & Courses</Link></li>
+            <li><Link to="/production-unit-setup">Production Unit Setup</Link></li>
+            <li><a href="/#gallery">Gallery</a></li>
+            <li><a href="/#buyback">Buyback</a></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
