@@ -30,7 +30,10 @@ import {
   Compass,
   FileCheck2,
   RefreshCw,
-  FolderSync
+  FolderSync,
+  ArrowDown,
+  Handshake,
+  AlertCircle
 } from 'lucide-react';
 import './ProductionSetupPage.css';
 
@@ -967,31 +970,136 @@ const ProductionSetupPage = ({ onOpenWhatsApp, onOpenContact }) => {
         </div>
       </section>
 
-      {/* Section 12: Support Beyond Production Setup (Buyback Link) */}
-      <section className="setup-section setup-buyback-link-section">
+      {/* Section 12: Buyback Guarantee — Support Beyond Production */}
+      <section id="buyback-guarantee" className="setup-section setup-buyback-section">
         <div className="container">
-          <div className="setup-buyback-box">
-            <div className="setup-buyback-text">
-              <span className="setup-section-tag">LONG-TERM PARTNERSHIP</span>
-              <h2 className="setup-section-title">Support Beyond Production Setup</h2>
-              <div className="setup-gold-divider"></div>
-              <p className="setup-buyback-desc">
-                Setting up the unit is only one part of the journey. Once your production process is
-                established, Sumoriya Organic also provides production support and a Buyback Guarantee,
-                subject to the applicable terms and conditions.
+          <div className="setup-buyback-main-card">
+            {/* Header / Intro */}
+            <div className="setup-buyback-header text-center">
+              <span className="setup-badge">
+                <ShieldCheck size={15} />
+                MARKET LINKAGE & ASSURANCE
+              </span>
+              <h2 className="setup-section-title">Buyback Guarantee — Support Beyond Production</h2>
+              <div className="setup-gold-divider mx-auto"></div>
+              <p className="setup-buyback-intro-p">
+                Setting up a Cordyceps production unit is only the beginning. Once production starts, having a reliable market-support system can be an important part of building a sustainable cultivation business.
               </p>
-              <div className="setup-buyback-note">
-                <ShieldCheck size={18} className="setup-gold-icon" />
-                <span>
-                  Transparent partnership terms and quality-focused procurement support.
-                </span>
+              <p className="setup-buyback-intro-p">
+                Sumoriya Organic provides a <strong>Buyback Guarantee</strong> for eligible Cordyceps production, subject to applicable quality, quantity and commercial terms.
+              </p>
+            </div>
+
+            {/* Subsection: How It Fits Into Your Journey */}
+            <div className="setup-buyback-journey-block">
+              <h3 className="setup-journey-heading text-center">How It Fits Into Your Journey</h3>
+              <div className="setup-journey-steps">
+                <div className="setup-journey-step">
+                  <span className="setup-journey-num">1</span>
+                  <span className="setup-journey-title">Training</span>
+                </div>
+                <div className="setup-journey-arrow" aria-hidden="true">
+                  <ArrowRight size={20} className="setup-journey-arrow-desktop" />
+                  <ArrowDown size={20} className="setup-journey-arrow-mobile" />
+                </div>
+                <div className="setup-journey-step">
+                  <span className="setup-journey-num">2</span>
+                  <span className="setup-journey-title">Production Unit Setup</span>
+                </div>
+                <div className="setup-journey-arrow" aria-hidden="true">
+                  <ArrowRight size={20} className="setup-journey-arrow-desktop" />
+                  <ArrowDown size={20} className="setup-journey-arrow-mobile" />
+                </div>
+                <div className="setup-journey-step">
+                  <span className="setup-journey-num">3</span>
+                  <span className="setup-journey-title">Cultivation & Production</span>
+                </div>
+                <div className="setup-journey-arrow" aria-hidden="true">
+                  <ArrowRight size={20} className="setup-journey-arrow-desktop" />
+                  <ArrowDown size={20} className="setup-journey-arrow-mobile" />
+                </div>
+                <div className="setup-journey-step highlight">
+                  <span className="setup-journey-num">4</span>
+                  <span className="setup-journey-title">Buyback Guarantee</span>
+                </div>
+              </div>
+              <p className="setup-journey-support-text text-center">
+                Eligible production can be supported through Sumoriya Organic's Buyback Guarantee, subject to applicable terms.
+              </p>
+            </div>
+
+            {/* Subsection: Why Buyback Support Matters */}
+            <div className="setup-buyback-cards-block">
+              <h3 className="setup-cards-heading text-center">Why Buyback Support Matters</h3>
+              <div className="setup-buyback-grid">
+                <div className="setup-buyback-card">
+                  <div className="setup-buyback-card-icon">
+                    <TrendingUp size={22} />
+                  </div>
+                  <h4 className="setup-buyback-card-title">Market Support</h4>
+                  <p className="setup-buyback-card-desc">
+                    A defined buyback pathway can provide greater clarity after production.
+                  </p>
+                </div>
+
+                <div className="setup-buyback-card">
+                  <div className="setup-buyback-card-icon">
+                    <Factory size={22} />
+                  </div>
+                  <h4 className="setup-buyback-card-title">Production-Focused Approach</h4>
+                  <p className="setup-buyback-card-desc">
+                    Our focus extends beyond setting up the unit.
+                  </p>
+                </div>
+
+                <div className="setup-buyback-card">
+                  <div className="setup-buyback-card-icon">
+                    <Handshake size={22} />
+                  </div>
+                  <h4 className="setup-buyback-card-title">Long-Term Support</h4>
+                  <p className="setup-buyback-card-desc">
+                    We aim to support the journey from cultivation to production.
+                  </p>
+                </div>
+
+                <div className="setup-buyback-card">
+                  <div className="setup-buyback-card-icon">
+                    <FileCheck2 size={22} />
+                  </div>
+                  <h4 className="setup-buyback-card-title">Clear Terms</h4>
+                  <p className="setup-buyback-card-desc">
+                    Buyback is subject to applicable quality, quantity and commercial requirements.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="setup-buyback-action">
-              <a href="/#buyback" className="setup-btn setup-btn-gold">
+
+            {/* Important Note / Disclaimer */}
+            <div className="setup-buyback-disclaimer-card">
+              <AlertCircle size={22} className="setup-disclaimer-icon" />
+              <p className="setup-disclaimer-text">
+                <strong>Important Note:</strong> Buyback eligibility, quality requirements, quantity requirements and other commercial terms may apply. Please contact the Sumoriya Organic team for current Buyback Guarantee details.
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="setup-buyback-actions-wrapper">
+              <button
+                type="button"
+                onClick={onOpenWhatsApp}
+                className="setup-btn setup-btn-gold"
+              >
                 <ShieldCheck size={18} />
-                Explore Buyback Guarantee
-              </a>
+                Discuss Buyback Guarantee
+              </button>
+              <button
+                type="button"
+                onClick={onOpenContact}
+                className="setup-btn setup-btn-secondary"
+              >
+                <ArrowRight size={18} />
+                Start Your Production Journey
+              </button>
             </div>
           </div>
         </div>
