@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   Phone,
   Mail,
@@ -22,6 +22,7 @@ import {
 import './ContactUs.css';
 
 const ContactUs = ({ onOpenWhatsApp }) => {
+  const location = useLocation();
   const [openFaq, setOpenFaq] = useState(0);
   const [formState, setFormState] = useState({
     name: '',
@@ -33,6 +34,24 @@ const ContactUs = ({ onOpenWhatsApp }) => {
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState('');
+
+  // Handle URL Query Params and Hash Scrolling (e.g. ?interest=Production+Unit+Setup#contact-form)
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const queryInterest = params.get('interest');
+    if (queryInterest) {
+      setFormState((prev) => ({ ...prev, interest: queryInterest }));
+    }
+
+    if (location.hash === '#contact-form') {
+      setTimeout(() => {
+        const formElem = document.getElementById('contact-form');
+        if (formElem) {
+          formElem.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
+    }
+  }, [location]);
 
   // Dynamic SEO Meta & Canonical Management
   useEffect(() => {

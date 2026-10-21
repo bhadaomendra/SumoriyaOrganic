@@ -518,14 +518,13 @@ const ProductionSetupPage = ({ onOpenWhatsApp, onOpenContact }) => {
                 <MessageCircle size={18} />
                 Discuss Your Production Unit
               </button>
-              <button
-                type="button"
-                onClick={onOpenContact}
+              <Link
+                to="/contact?interest=Production+Unit+Setup#contact-form"
                 className="setup-btn setup-btn-secondary"
               >
                 <PhoneCall size={18} />
                 Contact Us
-              </button>
+              </Link>
             </div>
 
             <div className="setup-hero-highlights">
@@ -882,14 +881,13 @@ const ProductionSetupPage = ({ onOpenWhatsApp, onOpenContact }) => {
                 <li><Check size={16} /> Retrofitting rooms for cleanroom standards</li>
                 <li><Check size={16} /> Workflow reorganization to prevent bottlenecks</li>
               </ul>
-              <button
-                type="button"
-                onClick={onOpenContact}
+              <Link
+                to="/contact?interest=Existing+Unit+Improvement#contact-form"
                 className="setup-btn setup-btn-secondary"
               >
                 <PhoneCall size={18} />
                 Discuss Your Unit
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -1092,14 +1090,13 @@ const ProductionSetupPage = ({ onOpenWhatsApp, onOpenContact }) => {
                 <ShieldCheck size={18} />
                 Discuss Buyback Guarantee
               </button>
-              <button
-                type="button"
-                onClick={onOpenContact}
+              <Link
+                to="/contact?interest=Buyback+Guarantee#contact-form"
                 className="setup-btn setup-btn-secondary"
               >
                 <ArrowRight size={18} />
                 Start Your Production Journey
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -1201,14 +1198,13 @@ const ProductionSetupPage = ({ onOpenWhatsApp, onOpenContact }) => {
                 <MessageCircle size={18} />
                 Discuss Your Production Unit
               </button>
-              <button
-                type="button"
-                onClick={onOpenContact}
+              <Link
+                to="/contact?interest=Production+Unit+Setup#contact-form"
                 className="setup-btn setup-btn-secondary"
               >
                 <PhoneCall size={18} />
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
         </div>
