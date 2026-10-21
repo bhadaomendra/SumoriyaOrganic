@@ -20,6 +20,7 @@ const Footer = () => (
           <ul className="footer-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/cordyceps">Cordyceps Militaris</Link></li>
             <li><a href="/#process">Production Setup</a></li>
             <li><a href="/#gallery">Training & Gallery</a></li>
             <li><a href="/#buyback">Buyback</a></li>
