@@ -7,18 +7,15 @@ import CallModal from './components/CallModal';
 import ScrollToTop from './components/ScrollToTop';
 
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import CordycepsPage from './pages/CordycepsPage';
-import TrainingPage from './pages/TrainingPage';
-import ProductionSetupPage from './pages/ProductionSetupPage';
-import BuybackPage from './pages/BuybackPage';
-import ContactPage from './pages/ContactPage';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openWhatsApp = () => {
-    const text = encodeURIComponent("Hello Sumoriya Organic! I want details on Cordyceps Production Unit training, setup & buyback guarantee.");
+    const text = encodeURIComponent(
+      "Hello Sumoriya Organic! I want details on Cordyceps Production Unit training, setup & buyback guarantee."
+    );
     window.open(`https://wa.me/919358463311?text=${text}`, '_blank');
   };
 
@@ -39,57 +36,13 @@ function App() {
         <Route
           path="/about"
           element={
-            <AboutPage
+            <AboutUs
               onOpenWhatsApp={openWhatsApp}
               onOpenContact={() => setModalOpen(true)}
             />
           }
         />
-        <Route
-          path="/cordyceps"
-          element={
-            <CordycepsPage
-              onOpenWhatsApp={openWhatsApp}
-              onOpenContact={() => setModalOpen(true)}
-            />
-          }
-        />
-        <Route
-          path="/training"
-          element={
-            <TrainingPage
-              onOpenWhatsApp={openWhatsApp}
-              onOpenContact={() => setModalOpen(true)}
-            />
-          }
-        />
-        <Route
-          path="/production-setup"
-          element={
-            <ProductionSetupPage
-              onOpenWhatsApp={openWhatsApp}
-              onOpenContact={() => setModalOpen(true)}
-            />
-          }
-        />
-        <Route
-          path="/buyback"
-          element={
-            <BuybackPage
-              onOpenWhatsApp={openWhatsApp}
-              onOpenContact={() => setModalOpen(true)}
-            />
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <ContactPage
-              onOpenWhatsApp={openWhatsApp}
-              onOpenContact={() => setModalOpen(true)}
-            />
-          }
-        />
+        <Route path="/about-us" element={<Navigate to="/about" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

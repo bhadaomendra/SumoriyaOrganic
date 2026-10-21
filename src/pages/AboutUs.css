@@ -1,0 +1,557 @@
+/* ===================================================
+   ABOUT US PAGE STYLES - SUMORIYA ORGANIC
+   STRICTLY SCOPED TO .about-us-page
+   ZERO GLOBAL SELECTORS - 100% ISOLATED
+   =================================================== */
+
+.about-us-page {
+  background-color: #f7f3e9;
+  color: #17251d;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  min-height: 80vh;
+}
+
+/* 1. Hero Section */
+.about-us-page .about-hero {
+  background: linear-gradient(135deg, #0b2117 0%, #102b1e 60%, #173b29 100%);
+  color: #ffffff;
+  padding: 72px 0 60px;
+  border-bottom: 3px solid #d69a36;
+  position: relative;
+}
+
+.about-us-page .about-container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.about-us-page .about-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 20px;
+}
+
+.about-us-page .about-breadcrumb a {
+  color: #d69a36;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.about-us-page .about-breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.about-us-page .about-breadcrumb-sep {
+  opacity: 0.4;
+}
+
+.about-us-page .about-eyebrow {
+  display: inline-block;
+  color: #e96b25;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.about-us-page .about-hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #ffffff;
+  max-width: 860px;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.about-us-page .about-hero-text {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 780px;
+  margin-bottom: 28px;
+}
+
+.about-us-page .about-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e96b25;
+  color: #ffffff;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(233, 107, 37, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.about-us-page .about-hero-btn:hover {
+  background-color: #c95618;
+  transform: translateY(-2px);
+}
+
+/* 2. Common Section Wrapper */
+.about-us-page .about-section {
+  padding: 70px 0;
+}
+
+.about-us-page .about-section-alt {
+  background-color: #eee8da;
+  border-top: 1px solid rgba(23, 37, 29, 0.08);
+  border-bottom: 1px solid rgba(23, 37, 29, 0.08);
+}
+
+.about-us-page .about-section-header {
+  margin-bottom: 40px;
+}
+
+.about-us-page .about-section-header.text-center {
+  text-align: center;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-us-page .about-section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.85rem, 3vw, 2.35rem);
+  color: #17251d;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.about-us-page .about-section-subtitle {
+  font-size: 1.02rem;
+  color: #647067;
+  line-height: 1.6;
+}
+
+/* 3. Who We Are Section */
+.about-us-page .who-we-are-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-us-page .who-we-are-badge-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid #173b29;
+}
+
+.about-us-page .who-we-are-badge-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(214, 154, 54, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-us-page .who-badge-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #102b1e;
+  margin-bottom: 12px;
+}
+
+.about-us-page .who-badge-desc {
+  font-size: 0.96rem;
+  color: #647067;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.about-us-page .who-badge-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(23, 37, 29, 0.08);
+}
+
+.about-us-page .who-stat-item h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.45rem;
+  color: #e96b25;
+  font-weight: 700;
+}
+
+.about-us-page .who-stat-item p {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #17251d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-us-page .who-we-are-text-block p {
+  font-size: 1.04rem;
+  line-height: 1.75;
+  color: #24352b;
+  margin-bottom: 18px;
+}
+
+.about-us-page .who-callout-box {
+  background: #ffffff;
+  border-left: 4px solid #d69a36;
+  border-radius: 0 12px 12px 0;
+  padding: 20px 24px;
+  margin-top: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.about-us-page .who-callout-box p {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #102b1e;
+  line-height: 1.65;
+  margin: 0;
+  font-style: italic;
+}
+
+/* 4. What We Do Section */
+.about-us-page .what-we-do-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.about-us-page .what-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 14px;
+  padding: 32px 26px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-page .what-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.07);
+  border-color: rgba(233, 107, 37, 0.35);
+}
+
+.about-us-page .what-card-num {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #d69a36;
+  letter-spacing: 1.2px;
+  margin-bottom: 14px;
+}
+
+.about-us-page .what-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(16, 43, 30, 0.06);
+  color: #173b29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.about-us-page .what-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #17251d;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.about-us-page .what-card-desc {
+  font-size: 0.95rem;
+  color: #647067;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.about-us-page .what-card-highlight {
+  border-top: 3px solid #e96b25;
+}
+
+/* 5. Our Approach Section */
+.about-us-page .approach-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  position: relative;
+}
+
+.about-us-page .approach-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 14px;
+  padding: 34px 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+.about-us-page .approach-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.about-us-page .approach-step-badge {
+  background-color: #173b29;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.8px;
+}
+
+.about-us-page .approach-step-arrow {
+  color: #e96b25;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.about-us-page .approach-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.48rem;
+  font-weight: 700;
+  color: #17251d;
+  margin-bottom: 10px;
+}
+
+.about-us-page .approach-desc {
+  font-size: 0.96rem;
+  color: #647067;
+  line-height: 1.65;
+}
+
+/* 6. Why Sumoriya Organic Section */
+.about-us-page .why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.about-us-page .why-item {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.1);
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.about-us-page .why-item:hover {
+  transform: translateX(4px);
+  border-color: rgba(23, 59, 41, 0.3);
+}
+
+.about-us-page .why-item.why-item-highlight {
+  background: linear-gradient(135deg, #102b1e 0%, #173b29 100%);
+  color: #ffffff;
+  border-color: #d69a36;
+}
+
+.about-us-page .why-icon {
+  flex-shrink: 0;
+  color: #e96b25;
+}
+
+.about-us-page .why-item.why-item-highlight .why-icon {
+  color: #d69a36;
+}
+
+.about-us-page .why-text {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #17251d;
+}
+
+.about-us-page .why-item.why-item-highlight .why-text {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* 7. Vision & Mission Section */
+.about-us-page .vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.about-us-page .vm-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 16px;
+  padding: 40px 34px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.about-us-page .vm-card-vision {
+  border-top: 4px solid #173b29;
+}
+
+.about-us-page .vm-card-mission {
+  border-top: 4px solid #e96b25;
+}
+
+.about-us-page .vm-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #173b29;
+}
+
+.about-us-page .vm-card-mission .vm-tag {
+  color: #e96b25;
+}
+
+.about-us-page .vm-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #17251d;
+  margin-bottom: 16px;
+}
+
+.about-us-page .vm-text {
+  font-size: 1.06rem;
+  line-height: 1.75;
+  color: #3d5045;
+}
+
+/* 8. Final CTA Section */
+.about-us-page .about-cta-section {
+  padding: 70px 0 90px;
+}
+
+.about-us-page .about-cta-box {
+  background: linear-gradient(135deg, #0b2117 0%, #102b1e 55%, #173b29 100%);
+  border-radius: 18px;
+  padding: 56px 44px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  box-shadow: 0 14px 36px rgba(11, 33, 23, 0.2);
+  border-bottom: 4px solid #d69a36;
+}
+
+.about-us-page .about-cta-content h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.about-us-page .about-cta-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 650px;
+}
+
+.about-us-page .about-cta-action {
+  flex-shrink: 0;
+}
+
+.about-us-page .about-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e96b25;
+  color: #ffffff;
+  padding: 15px 34px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(233, 107, 37, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.about-us-page .about-cta-btn:hover {
+  background-color: #c95618;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .about-us-page .who-we-are-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-us-page .approach-steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .about-us-page .vm-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .about-us-page .about-cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 38px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-us-page .about-hero {
+    padding: 48px 0 40px;
+  }
+  .about-us-page .about-section {
+    padding: 50px 0;
+  }
+  .about-us-page .who-badge-stats {
+    grid-template-columns: 1fr;
+  }
+  .about-us-page .why-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-us-page .about-cta-box {
+    padding: 30px 20px;
+  }
+  .about-us-page .about-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

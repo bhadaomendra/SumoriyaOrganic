@@ -1,24 +1,51 @@
 import React, { useState } from 'react';
-import { NavLink, Link, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { Menu, X, MessageCircle } from 'lucide-react';
 
 const Navbar = ({ onOpenWhatsApp }) => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
   const navigate = useNavigate();
+  const isHomePage = location.pathname === '/';
 
-  const navItems = [
-    { label: 'Home', path: '/' },
-    { label: 'About Us', path: '/about' },
-    { label: 'Cordyceps', path: '/cordyceps' },
-    { label: 'Training', path: '/training' },
-    { label: 'Production Setup', path: '/production-setup' },
-    { label: 'Buyback', path: '/buyback' },
-    { label: 'Contact', path: '/contact' }
+  const handleNavClick = (id) => {
+    setOpen(false);
+
+    if (id === 'about') {
+      navigate('/about');
+      return;
+    }
+
+    if (id === 'hero' && !isHomePage) {
+      navigate('/');
+      return;
+    }
+
+    if (isHomePage) {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate(`/#${id}`);
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
+  const links = [
+    ['Home', 'hero'],
+    ['About', 'about'],
+    ['Cordyceps', 'about'],
+    ['Training', 'gallery'],
+    ['Production Setup', 'process'],
+    ['Buyback', 'buyback'],
+    ['Gallery', 'gallery'],
+    ['Contact', 'contact']
   ];
 
-  const handleMobileNav = (path) => {
-    navigate(path);
-    setOpen(false);
+  const isLinkActive = (label) => {
+    if (label === 'Home') return isHomePage;
+    if (label === 'About') return location.pathname === '/about';
+    return false;
   };
 
   return (
@@ -35,15 +62,15 @@ const Navbar = ({ onOpenWhatsApp }) => {
 
         <nav aria-label="Primary navigation">
           <ul className="nav-links-list">
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <NavLink
-                  to={item.path}
-                  end={item.path === '/'}
-                  className={({ isActive }) => (isActive ? 'nav-link-btn active' : 'nav-link-btn')}
+            {links.map(([label, id]) => (
+              <li key={label}>
+                <button
+                  type="button"
+                  onClick={() => handleNavClick(id)}
+                  className={isLinkActive(label, id) ? 'nav-link-btn active' : 'nav-link-btn'}
                 >
-                  {item.label}
-                </NavLink>
+                  {label}
+                </button>
               </li>
             ))}
           </ul>
@@ -67,13 +94,14 @@ const Navbar = ({ onOpenWhatsApp }) => {
 
       {open && (
         <div className="mobile-nav">
-          {navItems.map((item) => (
+          {links.map(([label, id]) => (
             <button
-              key={item.label}
+              key={label}
               type="button"
-              onClick={() => handleMobileNav(item.path)}
+              onClick={() => handleNavClick(id)}
+              className={isLinkActive(label, id) ? 'active' : ''}
             >
-              {item.label}
+              {label}
             </button>
           ))}
           <button
