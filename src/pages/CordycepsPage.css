@@ -652,17 +652,31 @@
 }
 
 @media (max-width: 680px) {
+  .cordyceps-page .cordyceps-container {
+    width: 100%;
+    padding: 0 16px;
+  }
   .cordyceps-page .cordyceps-hero {
-    padding: 50px 0 42px;
+    padding: 44px 0 36px;
+  }
+  .cordyceps-page .cordyceps-hero-title {
+    font-size: clamp(2rem, 7.5vw, 2.6rem);
+    line-height: 1.15;
+  }
+  .cordyceps-page .cordyceps-hero-btn {
+    width: 100%;
+    justify-content: center;
   }
   .cordyceps-page .cordyceps-section {
-    padding: 50px 0;
+    padding: 44px 0;
   }
   .cordyceps-page .process-chain {
     grid-template-columns: 1fr;
   }
   .cordyceps-page .compare-table-wrapper {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
   }
   .cordyceps-page .compare-table {
     min-width: 580px;
@@ -670,14 +684,17 @@
   .cordyceps-page .what-is-box,
   .cordyceps-page .info-panel,
   .cordyceps-page .knowledge-box {
-    padding: 26px 20px;
+    padding: 24px 18px;
+    border-radius: 16px;
   }
   .cordyceps-page .final-cta-box {
-    padding: 30px 20px;
+    padding: 28px 18px;
+    border-radius: 16px;
   }
   .cordyceps-page .final-cta-actions {
     width: 100%;
     flex-direction: column;
+    gap: 10px;
   }
   .cordyceps-page .btn-final-primary,
   .cordyceps-page .btn-final-outline {

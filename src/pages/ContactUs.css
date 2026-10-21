@@ -883,12 +883,33 @@
 }
 
 @media (max-width: 768px) {
+  .contact-page .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
   .contact-page .contact-section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
 
   .contact-page .contact-hero {
-    padding: 3rem 0 3.5rem;
+    padding: 2.5rem 0 3rem;
+  }
+
+  .contact-page .contact-hero-title {
+    font-size: clamp(2rem, 7.5vw, 2.6rem);
+    line-height: 1.15;
+  }
+
+  .contact-page .contact-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .contact-page .contact-hero-actions .contact-btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .contact-page .contact-services-grid {
@@ -896,7 +917,19 @@
   }
 
   .contact-page .contact-form-wrapper {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .contact-page .contact-input,
+  .contact-page .contact-select,
+  .contact-page .contact-textarea {
+    font-size: 16px;
+  }
+
+  .contact-page .contact-form-submit-wrapper .contact-btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .contact-page .contact-form-grid {
@@ -904,7 +937,8 @@
   }
 
   .contact-page .contact-why-card {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.25rem;
+    border-radius: 16px;
   }
 
   .contact-page .contact-journey-flow {
@@ -927,6 +961,12 @@
   }
 
   .contact-page .contact-cta-card {
-    padding: 3rem 1.5rem;
+    padding: 2.5rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .contact-page .contact-cta-card .contact-btn {
+    width: 100%;
+    justify-content: center;
   }
 }

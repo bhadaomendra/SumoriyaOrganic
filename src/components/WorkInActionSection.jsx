@@ -125,7 +125,7 @@ const WorkInActionSection = () => {
             alignItems: 'center',
             justifyContent: 'center',
             zIndex: 9999,
-            padding: '24px'
+            padding: 'clamp(12px, 3vw, 24px)'
           }}
           role="dialog"
           aria-modal="true"
@@ -138,13 +138,13 @@ const WorkInActionSection = () => {
             title="Close (Esc)"
             style={{
               position: 'absolute',
-              top: '20px',
-              right: '20px',
+              top: '14px',
+              right: '14px',
               width: '42px',
               height: '42px',
               borderRadius: '50%',
-              background: 'rgba(255, 255, 255, 0.2)',
-              border: '1px solid rgba(255, 255, 255, 0.4)',
+              background: 'rgba(255, 255, 255, 0.22)',
+              border: '1px solid rgba(255, 255, 255, 0.45)',
               color: '#ffffff',
               display: 'flex',
               alignItems: 'center',
@@ -158,11 +158,11 @@ const WorkInActionSection = () => {
               e.currentTarget.style.transform = 'scale(1.08)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.22)';
               e.currentTarget.style.transform = 'scale(1)';
             }}
           >
-            <X size={24} />
+            <X size={22} />
           </button>
 
           {/* Previous Arrow */}
@@ -175,14 +175,14 @@ const WorkInActionSection = () => {
             aria-label="Previous image"
             style={{
               position: 'absolute',
-              left: '20px',
+              left: 'clamp(8px, 2vw, 20px)',
               top: '50%',
               transform: 'translateY(-50%)',
-              width: '46px',
-              height: '46px',
+              width: '42px',
+              height: '42px',
               borderRadius: '50%',
-              background: 'rgba(255, 255, 255, 0.15)',
-              border: '1px solid rgba(255, 255, 255, 0.3)',
+              background: 'rgba(255, 255, 255, 0.18)',
+              border: '1px solid rgba(255, 255, 255, 0.35)',
               color: '#ffffff',
               display: 'flex',
               alignItems: 'center',
@@ -191,7 +191,7 @@ const WorkInActionSection = () => {
               zIndex: 10001
             }}
           >
-            <ChevronLeft size={28} />
+            <ChevronLeft size={24} />
           </button>
 
           {/* Next Arrow */}
@@ -204,14 +204,14 @@ const WorkInActionSection = () => {
             aria-label="Next image"
             style={{
               position: 'absolute',
-              right: '20px',
+              right: 'clamp(8px, 2vw, 20px)',
               top: '50%',
               transform: 'translateY(-50%)',
-              width: '46px',
-              height: '46px',
+              width: '42px',
+              height: '42px',
               borderRadius: '50%',
-              background: 'rgba(255, 255, 255, 0.15)',
-              border: '1px solid rgba(255, 255, 255, 0.3)',
+              background: 'rgba(255, 255, 255, 0.18)',
+              border: '1px solid rgba(255, 255, 255, 0.35)',
               color: '#ffffff',
               display: 'flex',
               alignItems: 'center',
@@ -220,7 +220,7 @@ const WorkInActionSection = () => {
               zIndex: 10001
             }}
           >
-            <ChevronRight size={28} />
+            <ChevronRight size={24} />
           </button>
 
           {/* Modal Content */}
@@ -240,7 +240,7 @@ const WorkInActionSection = () => {
               alt={images[activeIdx][1]}
               style={{
                 maxWidth: '100%',
-                maxHeight: '75vh',
+                maxHeight: '68vh',
                 objectFit: 'contain',
                 borderRadius: '16px',
                 boxShadow: '0 20px 60px rgba(0, 0, 0, 0.6)',
@@ -249,15 +249,16 @@ const WorkInActionSection = () => {
             />
             <div
               style={{
-                marginTop: '14px',
+                marginTop: '12px',
                 textAlign: 'center',
-                color: '#ffffff'
+                color: '#ffffff',
+                padding: '0 10px'
               }}
             >
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '4px' }}>
+              <h3 style={{ fontSize: 'clamp(1rem, 4vw, 1.2rem)', fontWeight: 700, marginBottom: '4px' }}>
                 {images[activeIdx][1]}
               </h3>
-              <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>
+              <span style={{ fontSize: '0.82rem', color: 'rgba(255, 255, 255, 0.7)' }}>
                 {activeIdx + 1} of {images.length}
               </span>
             </div>

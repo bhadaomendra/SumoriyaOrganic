@@ -722,22 +722,36 @@
 }
 
 @media (max-width: 680px) {
+  .training-page .training-container {
+    width: 100%;
+    padding: 0 16px;
+  }
   .training-page .training-hero {
-    padding: 50px 0 42px;
+    padding: 44px 0 36px;
+  }
+  .training-page .training-hero-title {
+    font-size: clamp(2rem, 7.5vw, 2.6rem);
+    line-height: 1.15;
   }
   .training-page .training-section {
-    padding: 50px 0;
+    padding: 44px 0;
+  }
+  .training-page .hero-highlights-strip {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
   .training-page .info-card,
   .training-page .day-card,
   .training-page .setup-transition-box,
   .training-page .fee-card {
-    padding: 26px 20px;
+    padding: 24px 18px;
+    border-radius: 16px;
   }
   .training-page .hero-actions,
   .training-page .final-cta-actions {
     width: 100%;
     flex-direction: column;
+    gap: 10px;
   }
   .training-page .btn-training-primary,
   .training-page .btn-training-outline,

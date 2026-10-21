@@ -1461,12 +1461,38 @@
 }
 
 @media (max-width: 768px) {
+  .setup-page .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
   .setup-page .setup-section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
 
   .setup-page .setup-hero {
-    padding: 2.5rem 0 3.5rem;
+    padding: 2.25rem 0 3rem;
+  }
+
+  .setup-page .setup-hero-title {
+    font-size: clamp(2rem, 7.5vw, 2.6rem);
+    line-height: 1.15;
+  }
+
+  .setup-page .setup-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .setup-page .setup-hero-actions .setup-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .setup-page .setup-hero-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 16px;
   }
 
   .setup-page .setup-components-grid {

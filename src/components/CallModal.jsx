@@ -44,7 +44,7 @@ const CallModal = ({ isOpen, onClose }) => {
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 9999,
-        padding: '20px'
+        padding: '16px'
       }}
       role="dialog"
       aria-modal="true"
@@ -57,7 +57,9 @@ const CallModal = ({ isOpen, onClose }) => {
           borderRadius: 'var(--radius, 18px)',
           width: '100%',
           maxWidth: '480px',
-          padding: '36px',
+          maxHeight: 'calc(100vh - 32px)',
+          overflowY: 'auto',
+          padding: 'clamp(22px, 5vw, 36px)',
           position: 'relative',
           boxShadow: '0 24px 60px rgba(0, 0, 0, 0.35)',
           border: '1px solid rgba(0, 0, 0, 0.08)'
@@ -141,7 +143,7 @@ const CallModal = ({ isOpen, onClose }) => {
                     borderRadius: '10px',
                     border: '1px solid var(--line, #d1d5db)',
                     outline: 'none',
-                    fontSize: '0.95rem',
+                    fontSize: '16px',
                     color: 'var(--ink, #17251d)',
                     background: '#ffffff'
                   }}
@@ -164,7 +166,7 @@ const CallModal = ({ isOpen, onClose }) => {
                     borderRadius: '10px',
                     border: '1px solid var(--line, #d1d5db)',
                     outline: 'none',
-                    fontSize: '0.95rem',
+                    fontSize: '16px',
                     color: 'var(--ink, #17251d)',
                     background: '#ffffff'
                   }}
@@ -187,7 +189,7 @@ const CallModal = ({ isOpen, onClose }) => {
                     borderRadius: '10px',
                     border: '1px solid var(--line, #d1d5db)',
                     outline: 'none',
-                    fontSize: '0.95rem',
+                    fontSize: '16px',
                     color: 'var(--ink, #17251d)',
                     background: '#ffffff'
                   }}
