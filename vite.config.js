@@ -15,7 +15,15 @@ function spaRoutesPlugin() {
       const htmlContent = fs.readFileSync(indexHtmlPath, 'utf-8')
 
       // Routes that should exist as physical directories for static/cPanel servers
-      const routes = ['about', 'about-us', 'cordyceps', 'cordyceps-militaris']
+      const routes = [
+        'about',
+        'about-us',
+        'cordyceps',
+        'cordyceps-militaris',
+        'cordyceps-cultivation-training',
+        'training',
+        'cordyceps-training'
+      ]
 
       routes.forEach((route) => {
         const routeDir = path.join(distDir, route)

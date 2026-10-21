@@ -21,6 +21,11 @@ const Navbar = ({ onOpenWhatsApp }) => {
       return;
     }
 
+    if (id === 'training') {
+      navigate('/cordyceps-cultivation-training');
+      return;
+    }
+
     if (id === 'hero' && !isHomePage) {
       navigate('/');
       return;
@@ -40,7 +45,7 @@ const Navbar = ({ onOpenWhatsApp }) => {
     ['Home', 'hero'],
     ['About', 'about'],
     ['Cordyceps Militaris', 'cordyceps'],
-    ['Training', 'gallery'],
+    ['Training', 'training'],
     ['Production Setup', 'process'],
     ['Buyback', 'buyback'],
     ['Gallery', 'gallery'],
@@ -51,6 +56,7 @@ const Navbar = ({ onOpenWhatsApp }) => {
     if (id === 'hero') return isHomePage;
     if (id === 'about') return location.pathname === '/about';
     if (id === 'cordyceps') return location.pathname === '/cordyceps';
+    if (id === 'training') return location.pathname === '/cordyceps-cultivation-training' || location.pathname === '/training';
     return false;
   };
 

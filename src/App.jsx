@@ -9,6 +9,7 @@ import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
 import CordycepsPage from './pages/CordycepsPage';
+import TrainingPage from './pages/TrainingPage';
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -54,6 +55,18 @@ function App() {
           }
         />
         <Route path="/cordyceps-militaris" element={<Navigate to="/cordyceps" replace />} />
+        <Route
+          path="/cordyceps-cultivation-training"
+          element={
+            <TrainingPage
+              onOpenWhatsApp={openWhatsApp}
+              onOpenContact={() => setModalOpen(true)}
+            />
+          }
+        />
+        <Route path="/training" element={<Navigate to="/cordyceps-cultivation-training" replace />} />
+        <Route path="/cordyceps-training" element={<Navigate to="/cordyceps-cultivation-training" replace />} />
+        <Route path="/courses" element={<Navigate to="/cordyceps-cultivation-training" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
