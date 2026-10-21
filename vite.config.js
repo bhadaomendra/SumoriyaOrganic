@@ -25,7 +25,9 @@ function spaRoutesPlugin() {
         'cordyceps-training',
         'production-unit-setup',
         'production-setup',
-        'production'
+        'production',
+        'contact',
+        'contact-us'
       ]
 
       routes.forEach((route) => {

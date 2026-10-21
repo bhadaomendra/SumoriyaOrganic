@@ -11,6 +11,7 @@ import AboutUs from './pages/AboutUs';
 import CordycepsPage from './pages/CordycepsPage';
 import TrainingPage from './pages/TrainingPage';
 import ProductionSetupPage from './pages/ProductionSetupPage';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -79,6 +80,11 @@ function App() {
         />
         <Route path="/production-setup" element={<Navigate to="/production-unit-setup" replace />} />
         <Route path="/production" element={<Navigate to="/production-unit-setup" replace />} />
+        <Route
+          path="/contact"
+          element={<ContactUs onOpenWhatsApp={openWhatsApp} />}
+        />
+        <Route path="/contact-us" element={<Navigate to="/contact" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

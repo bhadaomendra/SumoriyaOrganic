@@ -31,6 +31,11 @@ const Navbar = ({ onOpenWhatsApp }) => {
       return;
     }
 
+    if (id === 'contact') {
+      navigate('/contact');
+      return;
+    }
+
     if (id === 'hero' && !isHomePage) {
       navigate('/');
       return;
@@ -62,6 +67,7 @@ const Navbar = ({ onOpenWhatsApp }) => {
     if (id === 'cordyceps') return location.pathname === '/cordyceps';
     if (id === 'training') return location.pathname === '/cordyceps-cultivation-training' || location.pathname === '/training';
     if (id === 'setup') return location.pathname === '/production-unit-setup' || location.pathname === '/production-setup';
+    if (id === 'contact') return location.pathname === '/contact' || location.pathname === '/contact-us';
     return false;
   };
 

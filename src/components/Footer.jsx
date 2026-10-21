@@ -25,7 +25,7 @@ const Footer = () => (
             <li><Link to="/production-unit-setup">Production Unit Setup</Link></li>
             <li><a href="/#gallery">Gallery</a></li>
             <li><a href="/#buyback">Buyback</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
 
