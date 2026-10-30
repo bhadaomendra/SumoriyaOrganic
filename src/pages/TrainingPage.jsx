@@ -22,7 +22,7 @@ import './TrainingPage.css';
 const TrainingPage = ({ onOpenWhatsApp, onOpenContact }) => {
   // Dynamic SEO Meta & Canonical Management
   useEffect(() => {
-    document.title = 'Cordyceps Cultivation Training in Jaipur & India | Sumoriya Organic';
+    document.title = 'Best Cordyceps Training in Jaipur & India | 2-Day Practical Course | Sumoriya Organic';
 
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
@@ -31,7 +31,7 @@ const TrainingPage = ({ onOpenWhatsApp, onOpenContact }) => {
       document.head.appendChild(metaDesc);
     }
     metaDesc.content =
-      'Learn Cordyceps militaris cultivation with Sumoriya Organic through 2-day theory and practical training. Online and office batches available across India.';
+      'Looking for the best Cordyceps training in Jaipur or India? Join Sumoriya Organic for a certified 2-day hands-on course covering spawn inoculation, cleanroom incubation, lab setup & buyback support.';
 
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -315,7 +315,7 @@ const TrainingPage = ({ onOpenWhatsApp, onOpenContact }) => {
           <span className="training-eyebrow">SUMORIYA ORGANIC GROWER EDUCATION</span>
 
           <h1 className="training-hero-title">
-            Cordyceps Cultivation Training in Jaipur & India
+            Best Cordyceps Cultivation Training in Jaipur & India
           </h1>
 
           <p className="training-hero-subheading">

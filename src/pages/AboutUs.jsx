@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   GraduationCap,
@@ -14,6 +14,46 @@ import {
 import './AboutUs.css';
 
 const AboutUs = ({ onOpenWhatsApp, onOpenContact }) => {
+  useEffect(() => {
+    document.title = 'About Sumoriya Organic | Cordyceps Cultivation Leaders in Jaipur & India';
+
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content =
+      'Learn about Sumoriya Organic Agro Gold Pvt. Ltd. based in Jaipur, Rajasthan. Leading Cordyceps militaris cultivation, practical lab training, production unit setup, and buyback support across India.';
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = 'https://sumoriyaorganic.com/about';
+
+    // Structured Data for AboutPage
+    const schemaScript = document.createElement('script');
+    schemaScript.type = 'application/ld+json';
+    schemaScript.id = 'about-schema';
+    schemaScript.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: 'About Sumoriya Organic Agro Gold Pvt. Ltd.',
+      url: 'https://sumoriyaorganic.com/about',
+      description:
+        'Leading Cordyceps militaris cultivation, practical lab training, production unit setup, and buyback support across Jaipur, Rajasthan and India.'
+    });
+    document.head.appendChild(schemaScript);
+
+    return () => {
+      const existing = document.getElementById('about-schema');
+      if (existing) existing.remove();
+    };
+  }, []);
+
   const whatWeDoList = [
     {
       num: '01',

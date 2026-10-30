@@ -55,7 +55,7 @@ const ContactUs = ({ onOpenWhatsApp }) => {
 
   // Dynamic SEO Meta & Canonical Management
   useEffect(() => {
-    document.title = 'Contact Sumoriya Organic | Cordyceps Training & Production Support';
+    document.title = 'Contact Sumoriya Organic | Cordyceps Training Center in Jaipur & India';
 
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
@@ -64,7 +64,7 @@ const ContactUs = ({ onOpenWhatsApp }) => {
       document.head.appendChild(metaDesc);
     }
     metaDesc.content =
-      'Contact Sumoriya Organic for Cordyceps cultivation training, production unit setup, cultivation support and Buyback Guarantee. Discuss your requirements with our team.';
+      'Contact Sumoriya Organic Agro Gold Pvt. Ltd. in Jaipur, Rajasthan. Enquire about upcoming 2-day Cordyceps cultivation training batches, lab setup consultation & buyback guarantee across India.';
 
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {

@@ -40,7 +40,7 @@ const AboutSection = () => (
           <span className="title-highlight-green">Real Opportunities.</span>
         </h2>
         <p className="about-copy">
-          Sumoriya Organic Agro Gold Pvt. Ltd. is focused on Cordyceps cultivation, practical training and production support. We work with individuals, farmers and entrepreneurs to help them learn, set up their own unit and build a sustainable business in the mushroom industry.
+          Based in Jaipur, Rajasthan, Sumoriya Organic Agro Gold Pvt. Ltd. is a recognized pioneer in Cordyceps militaris cultivation, practical lab training, and commercial unit setup across India. We support agri-entrepreneurs, growers, and individuals with structured batches (offline in Jaipur & online across India), high-yield spawn culture, and an assured buyback model.
         </p>
         <a href="#contact" className="btn-pill btn-pill-outline-dark about-btn">
           Know More About Us <ArrowRight size={16} />
@@ -51,7 +51,7 @@ const AboutSection = () => (
       <div className="about-center-col">
         <img
           src="/about_jar_new.jpg"
-          alt="Cordyceps cultivation jar with vibrant mushroom fruiting bodies"
+          alt="Cordyceps militaris cultivation jar - practical mushroom training in Jaipur and India"
           className="about-image"
           loading="lazy"
         />

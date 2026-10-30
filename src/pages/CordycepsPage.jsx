@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Thermometer,
@@ -14,6 +14,27 @@ import {
 import './CordycepsPage.css';
 
 const CordycepsPage = ({ onOpenWhatsApp, onOpenContact }) => {
+  useEffect(() => {
+    document.title = 'Cordyceps Militaris Mushroom | Cultivation, Biology & Benefits | Sumoriya Organic';
+
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content =
+      'Discover Cordyceps militaris: species biology, controlled lab cultivation parameters, medicinal value, and commercial mushroom farming feasibility in India with Sumoriya Organic.';
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = 'https://sumoriyaorganic.com/cordyceps';
+  }, []);
+
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) {

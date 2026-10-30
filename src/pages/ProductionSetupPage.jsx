@@ -42,7 +42,7 @@ const ProductionSetupPage = ({ onOpenWhatsApp, onOpenContact }) => {
 
   // Dynamic SEO Meta & Canonical Management
   useEffect(() => {
-    document.title = 'Cordyceps Production Unit Setup in India | Sumoriya Organic';
+    document.title = 'Cordyceps Production Unit Setup & Lab Consultation in Jaipur & India | Sumoriya Organic';
 
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
@@ -51,7 +51,7 @@ const ProductionSetupPage = ({ onOpenWhatsApp, onOpenContact }) => {
       document.head.appendChild(metaDesc);
     }
     metaDesc.content =
-      'Plan and set up a structured Cordyceps militaris production unit with Sumoriya Organic. Get support for layout, equipment, environmental control and production workflow.';
+      'Set up a commercial Cordyceps militaris production unit in Jaipur or anywhere in India. Sumoriya Organic provides laboratory layout design, cleanroom setup, autoclave equipment, HEPA airflow, and buyback support.';
 
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -70,7 +70,7 @@ const ProductionSetupPage = ({ onOpenWhatsApp, onOpenContact }) => {
       '@graph': [
         {
           '@type': 'Service',
-          name: 'Cordyceps Production Unit Setup',
+          name: 'Cordyceps Production Unit Setup & Lab Consultation',
           serviceType: 'Cordyceps Cultivation Facility Planning & Infrastructure Support',
           provider: {
             '@type': 'Organization',
@@ -86,12 +86,13 @@ const ProductionSetupPage = ({ onOpenWhatsApp, onOpenContact }) => {
               addressCountry: 'IN'
             }
           },
-          areaServed: {
-            '@type': 'Country',
-            name: 'India'
-          },
+          areaServed: [
+            { '@type': 'City', name: 'Jaipur' },
+            { '@type': 'AdministrativeArea', name: 'Rajasthan' },
+            { '@type': 'Country', name: 'India' }
+          ],
           description:
-            'End-to-end guidance for Cordyceps militaris production unit setup, space planning, cleanroom layout, equipment selection, and climate control.'
+            'End-to-end guidance for commercial Cordyceps militaris production unit setup, laboratory cleanroom layout, autoclave equipment selection, HVAC climate control, and structured buyback agreements across Jaipur, Rajasthan and India.'
         },
         {
           '@type': 'FAQPage',
