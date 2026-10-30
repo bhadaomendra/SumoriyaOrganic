@@ -1,0 +1,762 @@
+/* ===================================================
+   CORDYCEPS CULTIVATION TRAINING PAGE STYLES
+   STRICTLY SCOPED TO .training-page
+   ZERO GLOBAL CSS LEAKS - 100% ISOLATED
+   =================================================== */
+
+.training-page {
+  background-color: #f7f3e9;
+  color: #17251d;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  min-height: 80vh;
+}
+
+/* Container */
+.training-page .training-container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* 1. Hero Section */
+.training-page .training-hero {
+  background: linear-gradient(135deg, #0b2117 0%, #102b1e 60%, #173b29 100%);
+  color: #ffffff;
+  padding: 72px 0 64px;
+  border-bottom: 3px solid #d69a36;
+  position: relative;
+}
+
+.training-page .training-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 20px;
+}
+
+.training-page .training-breadcrumb a {
+  color: #d69a36;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.training-page .training-breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.training-page .training-breadcrumb-sep {
+  opacity: 0.4;
+}
+
+.training-page .training-eyebrow {
+  display: inline-block;
+  color: #e96b25;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.training-page .training-hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #ffffff;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+  max-width: 900px;
+}
+
+.training-page .training-hero-subheading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #d69a36;
+  margin-bottom: 16px;
+  line-height: 1.45;
+  max-width: 820px;
+}
+
+.training-page .training-hero-intro {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 820px;
+  margin-bottom: 28px;
+}
+
+/* Hero Key Highlights Strip */
+.training-page .hero-highlights-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 820px;
+  margin-bottom: 32px;
+}
+
+.training-page .hero-highlight-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+
+.training-page .highlight-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d69a36;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.training-page .highlight-val {
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+.training-page .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.training-page .btn-training-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e96b25;
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(233, 107, 37, 0.28);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.training-page .btn-training-primary:hover {
+  background-color: #c95618;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.training-page .btn-training-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.training-page .btn-training-outline:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Common Section Layout */
+.training-page .training-section {
+  padding: 72px 0;
+}
+
+.training-page .training-section-alt {
+  background-color: #eee8da;
+  border-top: 1px solid rgba(23, 37, 29, 0.08);
+  border-bottom: 1px solid rgba(23, 37, 29, 0.08);
+}
+
+.training-page .training-section-header {
+  margin-bottom: 38px;
+}
+
+.training-page .training-section-header.text-center {
+  text-align: center;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.training-page .training-section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.85rem, 3vw, 2.35rem);
+  color: #17251d;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.training-page .training-section-desc {
+  font-size: 1.05rem;
+  color: #4a5c51;
+  line-height: 1.7;
+}
+
+/* 2-Column Info Sections (Jaipur & India) */
+.training-page .info-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.training-page .info-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 16px;
+  padding: 38px 34px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.training-page .info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.training-page .info-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(23, 59, 41, 0.08);
+  color: #173b29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.training-page .info-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #102b1e;
+  line-height: 1.3;
+}
+
+.training-page .info-card-body p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #2e3e34;
+  margin-bottom: 14px;
+}
+
+.training-page .info-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Why Choose Sumoriya Organic Cards */
+.training-page .why-train-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.training-page .why-train-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.training-page .why-train-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(233, 107, 37, 0.4);
+}
+
+.training-page .why-train-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #173b29;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.training-page .why-train-content h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #17251d;
+  margin-bottom: 6px;
+}
+
+.training-page .why-train-content p {
+  font-size: 0.94rem;
+  color: #5c6c62;
+  line-height: 1.6;
+}
+
+/* 2-Day Curriculum Detailed Cards */
+.training-page .curriculum-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.training-page .day-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 16px;
+  padding: 38px 34px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.04);
+}
+
+.training-page .day-badge {
+  display: inline-block;
+  background-color: #173b29;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+}
+
+.training-page .day-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #102b1e;
+  margin-bottom: 12px;
+}
+
+.training-page .day-desc {
+  font-size: 0.98rem;
+  color: #647067;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+.training-page .syllabus-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.training-page .syllabus-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #24352b;
+  font-weight: 500;
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(23, 37, 29, 0.08);
+}
+
+.training-page .syllabus-item:last-child {
+  border-bottom: none;
+}
+
+.training-page .syllabus-icon {
+  color: #e96b25;
+  flex-shrink: 0;
+}
+
+/* Modes & Batch Size Strip */
+.training-page .modes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.training-page .mode-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 14px;
+  padding: 32px 26px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.training-page .mode-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(23, 59, 41, 0.06);
+  color: #173b29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.training-page .mode-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #17251d;
+  margin-bottom: 10px;
+}
+
+.training-page .mode-text {
+  font-size: 0.96rem;
+  color: #5c6c62;
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* Who Can Join Pill Grid */
+.training-page .who-join-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.training-page .who-join-pill {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #17251d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.training-page .who-join-icon {
+  color: #d69a36;
+  flex-shrink: 0;
+}
+
+/* What You Will Learn Grid */
+.training-page .learn-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.training-page .module-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 14px;
+  padding: 26px 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.training-page .module-card:hover {
+  transform: translateY(-3px);
+  border-color: #e96b25;
+}
+
+.training-page .module-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(233, 107, 37, 0.1);
+  color: #e96b25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.training-page .module-card h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #17251d;
+  margin-bottom: 6px;
+}
+
+.training-page .module-card p {
+  font-size: 0.88rem;
+  color: #647067;
+  line-height: 1.55;
+}
+
+/* From Training to Production Setup Banner */
+.training-page .setup-transition-box {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 16px;
+  padding: 44px 38px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+}
+
+.training-page .setup-transition-box p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #24352b;
+  margin-bottom: 28px;
+}
+
+.training-page .setup-flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.training-page .flow-step-tag {
+  background: #173b29;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+}
+
+.training-page .flow-step-arrow {
+  color: #e96b25;
+  font-weight: 700;
+}
+
+.training-page .btn-goto-setup {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #173b29;
+  color: #ffffff;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.training-page .btn-goto-setup:hover {
+  background-color: #102b1e;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Training Fees Card */
+.training-page .fee-card {
+  background: linear-gradient(135deg, #102b1e 0%, #173b29 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 42px 38px;
+  box-shadow: 0 8px 24px rgba(16, 43, 30, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border-left: 5px solid #d69a36;
+}
+
+.training-page .fee-info h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.training-page .fee-info p {
+  font-size: 1.02rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+.training-page .btn-fee-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e96b25;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(233, 107, 37, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.training-page .btn-fee-cta:hover {
+  background-color: #c95618;
+  transform: translateY(-2px);
+}
+
+/* FAQ Grid */
+.training-page .faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 20px;
+}
+
+.training-page .faq-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 37, 29, 0.12);
+  border-radius: 14px;
+  padding: 26px 26px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.training-page .faq-q {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #102b1e;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.training-page .faq-a {
+  font-size: 0.96rem;
+  color: #5c6c62;
+  line-height: 1.65;
+}
+
+/* Final CTA */
+.training-page .final-cta-section {
+  padding: 72px 0 92px;
+}
+
+.training-page .final-cta-box {
+  background: linear-gradient(135deg, #0b2117 0%, #102b1e 55%, #173b29 100%);
+  border-radius: 18px;
+  padding: 56px 44px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  box-shadow: 0 14px 36px rgba(11, 33, 23, 0.2);
+  border-bottom: 4px solid #d69a36;
+}
+
+.training-page .final-cta-content h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.training-page .final-cta-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 650px;
+}
+
+.training-page .final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .training-page .hero-highlights-strip {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .training-page .info-dual-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .training-page .curriculum-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .training-page .modes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .training-page .fee-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .training-page .final-cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 38px 28px;
+  }
+  .training-page .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .training-page .training-container {
+    width: 100%;
+    padding: 0 16px;
+  }
+  .training-page .training-hero {
+    padding: 44px 0 36px;
+  }
+  .training-page .training-hero-title {
+    font-size: clamp(2rem, 7.5vw, 2.6rem);
+    line-height: 1.15;
+  }
+  .training-page .training-section {
+    padding: 44px 0;
+  }
+  .training-page .hero-highlights-strip {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .training-page .info-card,
+  .training-page .day-card,
+  .training-page .setup-transition-box,
+  .training-page .fee-card {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+  .training-page .hero-actions,
+  .training-page .final-cta-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .training-page .btn-training-primary,
+  .training-page .btn-training-outline,
+  .training-page .btn-fee-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}

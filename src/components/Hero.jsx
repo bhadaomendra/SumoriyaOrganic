@@ -10,7 +10,7 @@ const Hero = ({ onOpenWhatsApp }) => {
       <div className="hero-bg-layer">
         <img
           src="/sumoriya-hero.png"
-          alt="Cordyceps cultivation lab expert and shelves"
+          alt="Best Cordyceps cultivation training in Jaipur and India - Sumoriya Organic lab setup"
           className="hero-bg-img"
           fetchPriority="high"
         />
@@ -20,14 +20,14 @@ const Hero = ({ onOpenWhatsApp }) => {
       <div className="container hero-grid-layout">
         {/* Left Column: Text Copy */}
         <div className="hero-copy">
-          <div className="hero-tag">PRACTICAL TRAINING | CULTIVATION EXPERTISE | PRODUCTION SUPPORT</div>
+          <div className="hero-tag">CORDYCEPS TRAINING IN JAIPUR & PAN-INDIA | LAB SETUP | BUYBACK SUPPORT</div>
           <h1 className="hero-title">
             Build Your Own<br />
             <span>Cordyceps</span><br />
             Production Unit
           </h1>
           <p className="hero-subtext">
-            Learn practical Cordyceps cultivation, production techniques and how to build a scalable production unit with expert guidance.
+            Join the premier Cordyceps cultivation training in Jaipur and online across India. Practical hands-on lab learning, complete production unit setup, and structured buyback support.
           </p>
           <div className="hero-btns-group">
             <button type="button" onClick={() => scrollTo('training')} className="btn-pill btn-pill-orange">
